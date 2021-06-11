@@ -13,7 +13,7 @@
         </div>
         <ul class="tuia-doc-header__top-nav">
           <li class="tui-doc-header__top-nav-item">
-            <a href="http://gitlab.dui88.com/tuia-frontend/tuia-activity-frontend/tuia-animation" target="_blank">
+            <a href="http://gitlab2.dui88.com/tuia-frontend/tuia-activity-frontend/tuia-animation-less.git" target="_blank">
               <img src="../assets/github.svg" alt="">
             </a>
           </li>
