@@ -37,11 +37,11 @@ level: 1
 # API
 
 ## 参数
-
+.breath(@scaleNum, @duration, @timing-function, @iteration-count)
 | 参数       | 说明                          | 类型               | 默认值     |
 | ---------- | ----------------------------- | ------------------ | ---------- |
-| time       | 动画完成所需时间                 | number           | 0.7s  |
 | scaleNum   | 呼吸缩放倍数                    | number | 0.95 |
-| ease       | 动画速度曲线,可选值 `linear`、`ease`、`ease-in`、`ease-in-out`、`step-start`、`step-end`等 | string | `ease`     |
-| iterationcount | 动画在结束前运行的次数,可选值 `infinite`或数值     | number | infinite |
+| duration       | 动画完成所需时间                 | number           | 0.7s  |
+| timing-function       | 动画速度曲线,可选值 `linear`、`ease`、`ease-in`、`ease-in-out`、`step-start`、`step-end`等 | string | `ease`     |
+| iteration-count | 动画在结束前运行的次数,可选值 `infinite`或数值     | number | infinite |
 <br />

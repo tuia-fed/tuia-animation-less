@@ -37,17 +37,17 @@
 }
 .box2 {
   // #region css2
-  .breath(0.7s);
+  .breath(0.95, 0.7s);
   // #endregion css2
 }
 .box3 {
   // #region css3
-  .breath(0.7s, 0.8);
+  .breath(0.8, 0.7s);
   // #endregion css3
 }
 .box4 {
   // #region css4
-  .breath(0.7s, 0.95, ease-in-out);
+  .breath(0.95, 0.7s, ease-in-out);
   // #endregion css4
 }
 </style>

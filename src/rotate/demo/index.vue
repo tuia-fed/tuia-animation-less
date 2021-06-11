@@ -17,6 +17,10 @@
 .btn-box {
   .WH(336, 331);
   .BG('@{url}');
+}
+.box1 {
+  // #region css1
   .rotate(8s, linear, 0.2s, infinite);
+  // #endregion css1
 }
 </style>

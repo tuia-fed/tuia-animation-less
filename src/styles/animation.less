@@ -1,5 +1,5 @@
 // // 呼吸效果
-.breath(@time: 0.7s, @scaleNum: 0.95, @ease: ease-in, @iterationcount: infinite) {
+.breath(@scaleNum: 0.95, @duration: 0.7s, @timing-function: ease-in, @iteration-count: infinite) {
   .breathframe(~`'tuia-breath_'+Math.round(Math.random() * 1.0e8)`);
 }
 .breathframe(@name) {
@@ -15,9 +15,9 @@
   }
 
   animation-name: @name;
-  animation-duration: @time;
-  animation-timing-function: @ease;
-  animation-iteration-count: @iterationcount;
+  animation-duration: @duration;
+  animation-timing-function: @timing-function;
+  animation-iteration-count: @iteration-count;
 }
 
 // 旋转
