@@ -71,11 +71,11 @@ export const sidebarGroupLevels = [
     level: 1
   },
   {
-    group: '业务动画',
+    group: '基础动画',
     level: 2
   },
   {
-    group: '基础动画',
+    group: '业务动画',
     level: 3
   }
 ]
