@@ -1,5 +1,5 @@
 <template>
-  <demo-section class="demo-loading">
+  <demo-section class="demo-shake">
     
     <demo-block card title="基础用法">
       <div class="btn-box box1"></div>

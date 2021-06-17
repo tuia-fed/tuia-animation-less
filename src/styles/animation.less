@@ -37,3 +37,46 @@
     }
   }
 }
+
+// 抖动
+.shake(@duration: 0.8s, @timing-function: ease-out, @iteration-count: infinite) {
+  .shakeframe(~`'tuia-shake_'+Math.round(Math.random() * 1.0e8)`)
+}
+.shakeframe(@name) {
+  @keyframes @name {
+    from,
+    80% {
+      transform: rotate(0);
+    }
+
+    20% {
+      transform: rotate(6deg);
+    }
+
+    45% {
+      transform: rotate(-4deg);
+    }
+
+    60% {
+      transform: rotate(2deg);
+    }
+  }
+  animation: @name @duration @timing-function @iteration-count;
+}
+
+// 淡入
+.fadeIn(@duration: 0.2s, @timing-function: both, @delay: 0s) {
+  .fadeInFrame(~`'tuia-fadeIn_'+Math.round(Math.random() * 1.0e8)`)
+}
+.fadeInFrame(@name) {
+  @keyframes @name {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+  animation: @name @duration @timing-function @delay;
+}

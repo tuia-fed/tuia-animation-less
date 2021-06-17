@@ -1,8 +1,11 @@
 <template>
-  <demo-section class="demo-loading">
+  <demo-section class="demo-rotate">
     
     <demo-block card title="基础用法">
       <div class="btn-box box1"></div>
+    </demo-block>
+    <demo-block card title="自定义用法">
+      <div class="btn-box box2"></div>
     </demo-block>
   </demo-section>
 </template>
@@ -20,7 +23,12 @@
 }
 .box1 {
   // #region css1
-  .rotate(8s, linear, 0.2s, infinite);
+  .rotate()
   // #endregion css1
+}
+.box2 {
+  // #region css2
+  .rotate(8s, linear, 0.2s, infinite);
+  // #endregion css2
 }
 </style>
