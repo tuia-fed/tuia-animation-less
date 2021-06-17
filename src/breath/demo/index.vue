@@ -23,8 +23,8 @@
 <style lang="less" scoped>
 @import '../../styles/index.less';
 .btn-box {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   background-repeat: no-repeat;
   background-size: 100% auto;

@@ -1,24 +1,19 @@
 <template>
-  <demo-section class="demo-fadeIn">
+  <demo-section class="demo-sparks">
     
     <demo-block card title="基础用法">
-      <div class="btn-box box1" v-show="showMask1" @click="showMask1 = false"></div>
-      <div class="button" @click="showMask1 = !showMask1">点击出现</div>
-    </demo-block>
-    <demo-block card title="自定义用法">
-      <div class="btn-box box2" v-show="showMask2" @click="showMask2 = false"></div>
-      <div class="button" @click="showMask2 = !showMask2">点击出现</div>
+      <div class="btn-box box1" v-show="show1" @click="show1 = false"></div>
+      <div class="button" @click="show1 = !show1">点击出现</div>
     </demo-block>
   </demo-section>
 </template>
 <script>
 // #region js
 export default {
-  name: 'fadeIn',
+  name: 'sparks',
   data() {
     return {
-      showMask1: false,
-      showMask2: false
+      show1: false
     }
   }
 }
@@ -27,13 +22,7 @@ export default {
 <style lang="less" scoped>
 @import '../../styles/index.less';
 .btn-box {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  background: rgba(0, 0, 0, 0.85);
+
 }
 .button {
   line-height: 64px;
@@ -60,12 +49,7 @@ export default {
 }
 .box1 {
   // #region css1
-  .fadeIn();
+  .sparks();
   // #endregion css1
-}
-.box2 {
-  // #region css2
-  .fadeIn(1s);
-  // #endregion css2
 }
 </style>
