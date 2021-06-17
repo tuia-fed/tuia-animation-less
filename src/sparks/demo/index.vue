@@ -5,6 +5,10 @@
       <div class="box box1" v-show="show1" @click="show1 = false"></div>
       <div class="button" @click="show1 = !show1">点击出现</div>
     </demo-block>
+    <demo-block card title="光火花">
+      <div class="box box2" v-show="show2" @click="show2 = false"></div>
+      <div class="button" @click="show2 = !show2">点击出现</div>
+    </demo-block>
   </demo-section>
 </template>
 <script>
@@ -13,7 +17,8 @@ export default {
   name: 'sparks',
   data() {
     return {
-      show1: false
+      show1: false,
+      show2: false
     }
   }
 }
@@ -57,5 +62,10 @@ export default {
   // #region css1
   .sparks();
   // #endregion css1
+}
+.box2 {
+  // #region css2
+  .sparksLight();
+  // #endregion css2
 }
 </style>

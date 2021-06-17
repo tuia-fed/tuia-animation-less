@@ -1,3 +1,4 @@
+// 火花
 .sparks {
   background-image: url('//yun.tuisnake.com/mami-media/img/e9064d2f-3644-413b-b62b-d8451f5fe76a.png');
   background-repeat: no-repeat;
@@ -46,5 +47,21 @@
   90.00%,
   100% {
     background-position: 100% 0%;
+  }
+}
+
+.sparksLight {
+  .BG('//yun.tuisnake.com/h5-mami/GoldMining_Video/firstSparkSprites.5d7e57.png');
+  background-size: 2500px 1000px;
+  transform: scale(2);
+  animation: spark-play 0.5s steps(1);
+
+  @keyframes spark-play {
+    0% { background-position: 0 0; }
+    20.00% { background-position: -500px 0; }
+    40.00% { background-position: -1000px 0; }
+    60.00% { background-position: -1500px 0; }
+    80.00% { background-position: -2000px 0; }
+    100.00% { background-position: 0 -500px; }
   }
 }
