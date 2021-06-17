@@ -110,3 +110,19 @@
   }
   animation: @name @duration @timing-function @delay;
 }
+// 淡出
+.fadeOut(@duration: 0.4s, @timing-function: both, @delay: 0s) {
+  .fadeOutFrame(~`'tuia-fadeOut_'+Math.round(Math.random() * 1.0e8)`)
+}
+.fadeOutFrame(@name) {
+  @keyframes @name {
+    0% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+  animation: @name @duration @timing-function @delay;
+}
