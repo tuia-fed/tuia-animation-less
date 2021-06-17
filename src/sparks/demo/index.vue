@@ -2,7 +2,7 @@
   <demo-section class="demo-sparks">
     
     <demo-block card title="基础用法">
-      <div class="btn-box box1" v-show="show1" @click="show1 = false"></div>
+      <div class="box box1" v-show="show1" @click="show1 = false"></div>
       <div class="button" @click="show1 = !show1">点击出现</div>
     </demo-block>
   </demo-section>
@@ -21,8 +21,14 @@ export default {
 </script>
 <style lang="less" scoped>
 @import '../../styles/index.less';
-.btn-box {
-
+.box {
+  position: fixed;
+  top: 400px;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  margin: 0 auto;
+  .WH(500, 500);
 }
 .button {
   line-height: 64px;
