@@ -35,3 +35,9 @@ level: 2
 <<< @/src/sparks/demo/index.vue#css1
 
 <br />
+
+## 光火花
+
+<<< @/src/sparks/demo/index.vue#css2
+
+<br />
