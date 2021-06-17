@@ -1,8 +1,8 @@
 // // 呼吸效果
-.breath(@scaleNum: 0.95, @duration: 0.7s, @timing-function: ease-in, @iteration-count: infinite) {
-  .breathframe(~`'tuia-breath_'+Math.round(Math.random() * 1.0e8)`);
+.breathe(@scaleNum: 0.95, @duration: 0.7s, @timing-function: ease-in, @iteration-count: infinite) {
+  .breatheframe(~`'tuia-breathe_'+Math.round(Math.random() * 1.0e8)`);
 }
-.breathframe(@name) {
+.breatheframe(@name) {
   @keyframes @name {
     0%,
     100% {

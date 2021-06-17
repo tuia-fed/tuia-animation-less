@@ -3,7 +3,7 @@ group: 基础动画
 level: 1
 ---
 
-# breath 呼吸
+# breathe 呼吸
 
 ## 介绍
 * 给元素添加呼吸动效
@@ -12,32 +12,32 @@ level: 1
 
 ## 默认
 
-<<< @/src/breath/demo/index.vue#css1
+<<< @/src/breathe/demo/index.vue#css1
 
 <br />
 
 ## 自定义动画完成所需时间
 
-<<< @/src/breath/demo/index.vue#css2
+<<< @/src/breathe/demo/index.vue#css2
 
 <br />
 
 ## 自定义动画呼吸幅度
 
-<<< @/src/breath/demo/index.vue#css3
+<<< @/src/breathe/demo/index.vue#css3
 
 <br />
 
 ## 自定义动画速度曲线
 
-<<< @/src/breath/demo/index.vue#css4
+<<< @/src/breathe/demo/index.vue#css4
 
 <br />
 
 # API
 
 ## 参数
-.breath(@scaleNum, @duration, @timing-function, @iteration-count)
+.breathe(@scaleNum, @duration, @timing-function, @iteration-count)
 | 参数       | 说明                          | 类型               | 默认值     |
 | ---------- | ----------------------------- | ------------------ | ---------- |
 | scaleNum   | 呼吸缩放倍数                    | number | 0.95 |
