@@ -39,7 +39,7 @@
 }
 
 // 抖动
-.shake(@duration: 0.8s, @timing-function: ease-out, @iteration-count: infinite) {
+.shake(@duration: 0.8s, @timing-function: ease-out, @delay: 0s, @iteration-count: infinite, @direction: normal, @fill-mode: none) {
   .shakeframe(~`'tuia-shake_'+Math.round(Math.random() * 1.0e8)`)
 }
 .shakeframe(@name) {
@@ -61,9 +61,39 @@
       transform: rotate(2deg);
     }
   }
-  animation: @name @duration @timing-function @iteration-count;
+  animation: @name @duration @timing-function @delay @iteration-count @direction @fill-mode;
 }
 
+.shakeHurried(@duration: 0.6s, @timing-function: linear, @delay: 0.3s, @iteration-count: infinite, @direction: alternate, @fill-mode: none) {
+  .shakeHurriedFrame(~`'tuia-shake_'+Math.round(Math.random() * 1.0e8)`);
+}
+.shakeHurriedFrame(@name) {
+  @keyframes @name {
+    0%,
+    to {
+      transform: translateZ(0);
+    }
+
+    10%,
+    20% {
+      transform: rotate(-3deg) translateZ(0);
+    }
+
+    30%,
+    50%,
+    70%,
+    90% {
+      transform: rotate(3deg) translateZ(0);
+    }
+
+    40%,
+    60%,
+    80% {
+      transform: rotate(-3deg) translateZ(0);
+    }
+  }
+  animation: @name @duration @timing-function @delay @iteration-count @direction @fill-mode;
+}
 // 淡入
 .fadeIn(@duration: 0.2s, @timing-function: both, @delay: 0s) {
   .fadeInFrame(~`'tuia-fadeIn_'+Math.round(Math.random() * 1.0e8)`)

@@ -4,6 +4,15 @@
     <demo-block card title="基础用法">
       <div class="btn-box box1"></div>
     </demo-block>
+    <demo-block card title="自定义用法">
+      <div class="btn-box box2"></div>
+    </demo-block>
+    <demo-block card title="急促抖动新用法">
+      <div class="btn-box box3"></div>
+    </demo-block>
+    <demo-block card title="急促抖动自定义">
+      <div class="btn-box box4"></div>
+    </demo-block>
   </demo-section>
 </template>
 <script>
@@ -27,5 +36,20 @@
   // #region css1
   .shake()
   // #endregion css1
+}
+.box2 {
+  // #region css2
+  .shake(0.6s, linear, 0.3s, infinite, alternate)
+  // #endregion css2
+}
+.box3 {
+  // #region css3
+  .shakeHurried()
+  // #endregion css3
+}
+.box4 {
+  // #region css4
+  .shakeHurried(0.8s)
+  // #endregion css4
 }
 </style>
