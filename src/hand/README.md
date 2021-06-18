@@ -31,7 +31,7 @@ level: 2
 # API
 
 ## 参数
-.handAni(@duration, @fromRotate: 0, @toRotate )
+.handAni(@duration, @fromRotate, @toRotate )
 | 参数       | 说明                          | 类型               | 默认值     |
 | ---------- | ----------------------------- | ------------------ | ---------- |
 | duration       | 动画完成所需时间                 | number           | 0.6s  |
