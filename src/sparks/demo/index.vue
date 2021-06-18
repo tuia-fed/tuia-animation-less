@@ -2,12 +2,12 @@
   <demo-section class="demo-sparks">
     
     <demo-block card title="基础用法">
-      <div class="box box1" v-show="show1" @click="show1 = false"></div>
-      <div class="button" @click="show1 = !show1">点击出现</div>
+      <div class="box box1" v-show="show1"></div>
+      <div class="button" @click="handleBtnClick('show1')">点击出现</div>
     </demo-block>
     <demo-block card title="光火花">
-      <div class="box box2" v-show="show2" @click="show2 = false"></div>
-      <div class="button" @click="show2 = !show2">点击出现</div>
+      <div class="box box2" v-show="show2"></div>
+      <div class="button" @click="handleBtnClick('show2')">点击出现</div>
     </demo-block>
   </demo-section>
 </template>
@@ -20,7 +20,15 @@ export default {
       show1: false,
       show2: false
     }
-  }
+  },
+  methods: {
+    handleBtnClick(key) {
+      this[key] = true
+      setTimeout(() => {
+        this[key] = false
+      }, 600)
+    }
+  },
 }
 // #endregion js
 </script>

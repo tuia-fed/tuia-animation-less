@@ -95,7 +95,7 @@
   animation: @name @duration @timing-function @delay @iteration-count @direction @fill-mode;
 }
 // 淡入
-.fadeIn(@duration: 0.2s, @timing-function: both, @delay: 0s) {
+.fadeIn(@duration: 0.2s) {
   .fadeInFrame(~`'tuia-fadeIn_'+Math.round(Math.random() * 1.0e8)`)
 }
 .fadeInFrame(@name) {
@@ -108,10 +108,12 @@
       opacity: 1;
     }
   }
-  animation: @name @duration @timing-function @delay;
+  animation-name:@name;
+  animation-duration:@duration;
+  animation-fill-mode:forwards;
 }
 // 淡出
-.fadeOut(@duration: 0.4s, @timing-function: both, @delay: 0s) {
+.fadeOut(@duration: 0.4s) {
   .fadeOutFrame(~`'tuia-fadeOut_'+Math.round(Math.random() * 1.0e8)`)
 }
 .fadeOutFrame(@name) {
@@ -124,5 +126,7 @@
       opacity: 0;
     }
   }
-  animation: @name @duration @timing-function @delay;
+  animation-name:@name;
+  animation-duration:@duration;
+  animation-fill-mode:forwards;
 }

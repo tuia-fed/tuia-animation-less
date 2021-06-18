@@ -25,10 +25,8 @@ level: 1
 # API
 
 ## 参数
-.fadeOut(@duration, @timing-function, @delay)
+.fadeOut(@duration)
 | 参数       | 说明                          | 类型               | 默认值     |
 | ---------- | ----------------------------- | ------------------ | ---------- |
 | duration       | 动画完成所需时间                 | number           | 0.2s  |
-| timing-function       | 动画速度曲线,可选值 `linear`、`ease`、`ease-in`、`ease-in-out`、`step-start`、`step-end`等 | string | `both`     |
-| delay     | 动画延迟时间  | number | 0s |
 <br />
