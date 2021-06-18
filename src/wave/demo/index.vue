@@ -1,5 +1,5 @@
 <template>
-  <demo-section class="demo-hand">
+  <demo-section class="demo-wave">
     
     <demo-block card title="基础用法">
       <div class="box box1"></div>
@@ -15,7 +15,7 @@
 <script>
 // #region js
 export default {
-  name: 'hand'
+  name: 'wave'
 }
 // #endregion js
 </script>
@@ -28,19 +28,21 @@ export default {
 
 .box1 {
   // #region css1
-  .handAni();
+  .wave();
   // #endregion css1
+  background-image: url('//yun.tuisnake.com/h5-mani/videoTpl_3/red-bag-hand.png');
 }
 .box2 {
   // #region css2
-  .handAni(1s);
+  .wave(1s);
   // #endregion css2
+  background-image: url('//yun.tuisnake.com/h5-mani/videoTpl_3/red-bag-hand.png');
 }
 .box3 {
   margin: 80px;
   // #region css3
-  .handAni(1s, 20deg, -20deg);
-  background-image: url('//yun.dui88.com/h5-mani/crystallBall/hand.png');
+  .wave(1s, 20deg, -20deg);
   // #endregion css3
+  background-image: url('//yun.dui88.com/h5-mani/crystallBall/hand.png');
 }
 </style>

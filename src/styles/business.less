@@ -178,27 +178,3 @@
     }
   }
 }
-.handAni(@duration: 0.6s, @fromRotate: 0, @toRotate: 30deg) {
-  pointer-events: none;
-  background-image: url('//yun.tuisnake.com/h5-mani/videoTpl_3/red-bag-hand.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-  transform-origin: 100% 100%;
-  .handAniFrame(~`'tuia-hand_'+Math.round(Math.random() * 1.0e8)`);
-}
-.handAniFrame(@name) {
-  animation: @name @duration infinite;
-  @keyframes @name {
-    0%,
-    40%,
-    80%,
-    100% {
-      transform: rotate(@fromRotate);
-    }
-
-    20%,
-    60% {
-      transform: rotate(@toRotate);
-    }
-  }
-}

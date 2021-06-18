@@ -1,9 +1,9 @@
 ---
-group: 业务动画
-level: 2
+group: 基础动画
+level: 1
 ---
 
-# hand 手势
+# wave 挥动
 
 ## 介绍
 * 常用于大转盘或者刮刮卡手势动画
@@ -12,29 +12,29 @@ level: 2
 
 ## 默认
 
-<<< @/src/hand/demo/index.vue#css1
+<<< @/src/wave/demo/index.vue#css1
 
 <br />
 
 ## 自定义动画完成所需时间
 
-<<< @/src/hand/demo/index.vue#css2
+<<< @/src/wave/demo/index.vue#css2
 
 <br />
 
 ## 自定义手势幅度
 
-<<< @/src/hand/demo/index.vue#css3
+<<< @/src/wave/demo/index.vue#css3
 
 <br />
 
 # API
 
 ## 参数
-.handAni(@duration, @fromRotate, @toRotate )
+.wave(@duration, @fromRotate, @toRotate )
 | 参数       | 说明                          | 类型               | 默认值     |
 | ---------- | ----------------------------- | ------------------ | ---------- |
 | duration       | 动画完成所需时间                 | number           | 0.6s  |
-| fromRotate     | 手势开始的角度                   | number           | 0       |
-| toRotate        |手势结束的角度                   | number          | 30deg |
+| fromRotate     | 元素挥动开始的角度                   | number           | 0       |
+| toRotate        |元素挥动结束的角度                   | number          | 30deg |
 <br />

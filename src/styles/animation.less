@@ -130,3 +130,27 @@
   animation-duration:@duration;
   animation-fill-mode:forwards;
 }
+// 挥动
+.wave(@duration: 0.6s, @fromRotate: 0, @toRotate: 30deg) {
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform-origin: 100% 100%;
+  .waveAniFrame(~`'tuia-wave_'+Math.round(Math.random() * 1.0e8)`);
+}
+.waveAniFrame(@name) {
+  animation: @name @duration infinite;
+  @keyframes @name {
+    0%,
+    40%,
+    80%,
+    100% {
+      transform: rotate(@fromRotate);
+    }
+
+    20%,
+    60% {
+      transform: rotate(@toRotate);
+    }
+  }
+}
