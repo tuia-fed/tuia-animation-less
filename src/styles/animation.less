@@ -154,3 +154,34 @@
     }
   }
 }
+// 位移
+.move_y(@from: 100%, @to: 0, @duration: 0.3s, @timing-function: ease, @delay: 0, @iteration-count: forwards) {
+  .moveYFrame(~`'tuia-move_y_'+Math.round(Math.random() * 1.0e8)`);
+}
+.moveYFrame(@name) {
+  animation: @name @duration @timing-function @iteration-count;
+  @keyframes @name {
+    0% {
+      transform: translateY(@from)
+    }
+
+    100% {
+      transform: translateY(@to);
+    }
+  }
+}
+.move_x(@from: 0, @to: 100%, @duration: 0.3s, @timing-function: ease, @delay: 0, @iteration-count: forwards) {
+  .moveXFrame(~`'tuia-move_x_'+Math.round(Math.random() * 1.0e8)`);
+}
+.moveXFrame(@name) {
+  animation: @name @duration @timing-function @iteration-count;
+  @keyframes @name {
+    0% {
+      transform: translateX(@from)
+    }
+
+    100% {
+      transform: translateX(@to);
+    }
+  }
+}
