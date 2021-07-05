@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v2
+        uses: actions/checkout@master
         with:
           persist-credentials: false
       - name: Install and Build
@@ -19,8 +19,9 @@ jobs:
         uses: jenkey2011/vuepress-deploy@v1.8.1
         with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          TARGET_BRANCH: gh-pages
           BUILD_SCRIPT: yarn docs:build
-          BUILD_DIR: docs/dist/
+          BUILD_DIR: docs/dist
     
   build-and-deploy-vue:
     runs-on: ubuntu-latest
