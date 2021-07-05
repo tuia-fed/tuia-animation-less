@@ -11,8 +11,8 @@
     "dev-demo": "vue-cli-service serve",
     "dev-docs": "vuepress dev docs --open",
     "dev-copy": "node plugins/fs-copy",
-    "docs:build": "vuepress build docs",
-    "build": "vue-cli-service build",
+    "docs:build": "vuepress NODE_ENV=production build docs",
+    "build": "vue-cli-service NODE_ENV=production build",
     "build:watch": "vue-cli-service build --watch",
     "lint": "vue-cli-service lint"
   },
