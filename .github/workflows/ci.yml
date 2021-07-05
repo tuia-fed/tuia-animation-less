@@ -1,14 +1,8 @@
-# This is a basic workflow to help you get started with Actions
-
 name: CI
-
-# Controls when the workflow will run
 on:
   push:
     branches:
       - master
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -18,12 +12,19 @@ jobs:
         with:
           persist-credentials: false
         
-      - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
+      - name: Install and Build 🔧 
         run: |
           yarn install
-          node plugins/fs-copy
           yarn build
+          node plugins/fs-copy
           
+      - name: Deploy vuehtml 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          BRANCH: gh-pages
+          FOLDER: dist
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+      
       - name: Deploy docs🚀
         uses: jenkey2011/vuepress-deploy@c125854a55a2d3fbe1847e0fc25a4aa662582520
         with:
@@ -33,10 +34,4 @@ jobs:
           BUILD_SCRIPT: yarn docs:build
           BUILD_DIR: docs/dist
           
-      - name: Deploy vuehtml 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.4
-        with:
-          BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: dist # The folder the action should deploy.
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 
