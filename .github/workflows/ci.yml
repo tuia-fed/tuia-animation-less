@@ -22,6 +22,7 @@ jobs:
         run: |
           yarn install
           node plugins/fs-copy
+          yarn build
           
       - name: Deploy docs🚀
         uses: jenkey2011/vuepress-deploy@c125854a55a2d3fbe1847e0fc25a4aa662582520
