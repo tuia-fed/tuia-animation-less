@@ -5,6 +5,7 @@
   "private": true,
   "main": "lib/index.js",
   "module": "es/index.js",
+  "homepage": "https://tuia-fed.github.io/tuia-animation-less",
   "scripts": {
     "serve": "concurrently --kill-others-on-fail \"npm:dev-*\"",
     "dev-demo": "vue-cli-service serve",
