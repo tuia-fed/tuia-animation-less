@@ -4,7 +4,7 @@ const path = require('path')
 const resolve = dir => path.join(__dirname, dir)
 
 module.exports = {
-  base: '/tuia-animation-less/',
+  base: '/',
   title: pkg.name.toUpperCase(),
   description: pkg.description,
   dest: 'docs/dist',
