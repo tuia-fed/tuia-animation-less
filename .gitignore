@@ -4,7 +4,7 @@ node_modules
 es
 lib
 docs/components/*
-
+docs/dist/*
 
 # local env files
 .env.local

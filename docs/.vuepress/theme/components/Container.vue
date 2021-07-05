@@ -13,15 +13,22 @@
 <script>
 const NAV_HEIGHT = 60
 const FOOTER_HEIGHT = 32
-
 export default {
   name: 'Container',
   props: {
     isContainerCover: Boolean
   },
+  data() {
+    return {
+      WINDOW: null
+    }
+  },
   computed: {
     containerStyle() {
-      const innerHeight = window.innerHeight
+      let innerHeight = null
+      if(this.WINDOW) {
+        innerHeight =  this.WINDOW.innerHeight
+      }
       return {
         paddingRight: `${this.containerPaddingRight}px`,
         minHeight: `${innerHeight - NAV_HEIGHT - FOOTER_HEIGHT - 43}px`
@@ -30,6 +37,9 @@ export default {
     containerPaddingRight() {
       return this.isContainerCover ? 0 : 390
     }
+  },
+  mounted() {
+     this.WINDOW = window
   }
 }
 </script>
