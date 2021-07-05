@@ -16,7 +16,7 @@ jobs:
         with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BUILD_SCRIPT: yarn && node plugins/fs-copy && yarn docs:build
-          BUILD_DIR: docs/dist
+          BUILD_DIR: docs/dist/
     
   build-and-deploy-vue:
     runs-on: ubuntu-latest
