@@ -61,7 +61,7 @@ export function iframeConfigPath (iframePort = '8080') {
 }
 
 /* 基础demo服务配置 */
-export const DOC_PUBLICPATH = process.env.NODE_ENV === 'production' ? '' : '/demo'
+export const DOC_PUBLICPATH = '/demo'
 export const DOC_DEVPORT = '7000'
 
 /* 侧边栏默认分组顺序 */
