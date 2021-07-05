@@ -15,7 +15,6 @@ jobs:
         run: |
           yarn install
           yarn copy:build
-          yarn docs:build
       - name: Deploy 🚀
         uses: jenkey2011/vuepress-deploy@v1.8.1
         with:
