@@ -62,7 +62,6 @@ export default {
       } else {
         iframePath = basicPath + '/#/'
       }
-      console.log(iframePath)
       return iframePath
     }
   },
