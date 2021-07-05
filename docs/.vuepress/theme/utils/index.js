@@ -53,7 +53,7 @@ export function iframeReady (iframe, callback) {
 export function iframeConfigPath (iframePort = '8080') {
   const { protocol, hostname, port, origin } = window.location
   const localPathExp = /^127\.0\.0\.1$/
-  let basicPath = `${origin}/tuia-animation-less`
+  let basicPath = ""
   if (localPathExp.test(hostname) || port === '8080') { // 本地开发
     basicPath = `${protocol}//${hostname}:${iframePort}`
   }
