@@ -15,16 +15,8 @@ jobs:
       - name: Install and Build 🔧 
         run: |
           yarn install
-          yarn build
           node plugins/fs-copy
           
-      - name: Deploy vuehtml 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.4
-        with:
-          BRANCH: gh-pages
-          FOLDER: dist
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-      
       - name: Deploy docs🚀
         uses: jenkey2011/vuepress-deploy@c125854a55a2d3fbe1847e0fc25a4aa662582520
         with:
