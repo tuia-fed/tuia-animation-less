@@ -4,7 +4,7 @@ on:
     branches:
       - master
 jobs:
-  build-and-deploy:
+  build-and-deploy-docs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
@@ -17,7 +17,7 @@ jobs:
           yarn install
           node plugins/fs-copy
           
-      - name: Deploy docs🚀
+      - name: Deploy 🚀
         uses: jenkey2011/vuepress-deploy@c125854a55a2d3fbe1847e0fc25a4aa662582520
         with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
@@ -25,5 +25,23 @@ jobs:
           TARGET_BRANCH: gh-pages
           BUILD_SCRIPT: yarn docs:build
           BUILD_DIR: docs/dist
+    
+  build-and-deploy-vue:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
+      with:
+        persist-credentials: false
+    - name: Install and Build
+      run: |
+        yarn install
+        yarn build
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: dist
           
 
