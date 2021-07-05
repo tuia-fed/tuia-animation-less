@@ -31,4 +31,4 @@ jobs:
           TARGET_REPO: tuia-fed/tuia-animation-less
           TARGET_BRANCH: gh-pages
           BUILD_SCRIPT: yarn docs:build
-          BUILD_DIR: docs/dost
+          BUILD_DIR: docs/dist
