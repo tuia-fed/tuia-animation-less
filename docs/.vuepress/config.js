@@ -7,7 +7,7 @@ module.exports = {
   base: '/tuia-animation-less/',
   title: pkg.name.toUpperCase(),
   description: pkg.description,
-  dest: 'docs/dist',
+  dest: 'dist',
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }]
   ],
