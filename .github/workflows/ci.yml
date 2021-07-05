@@ -11,11 +11,16 @@ jobs:
         uses: actions/checkout@v2
         with:
           persist-credentials: false
+      - name: Install and Build
+        run: |
+          yarn install
+          yarn copy:build
+          yarn docs:build
       - name: Deploy 🚀
         uses: jenkey2011/vuepress-deploy@v1.8.1
         with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BUILD_SCRIPT: yarn && node plugins/fs-copy && yarn docs:build
+          BUILD_SCRIPT: yarn docs:build
           BUILD_DIR: docs/dist/
     
   build-and-deploy-vue:
