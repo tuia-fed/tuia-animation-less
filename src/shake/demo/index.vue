@@ -2,16 +2,24 @@
   <demo-section class="demo-shake">
     
     <demo-block card title="基础用法">
-      <div class="btn-box box1"></div>
+      <div class="btn-box box1">
+        <div class="ele2"></div>
+      </div>
     </demo-block>
     <demo-block card title="自定义用法">
-      <div class="btn-box box2"></div>
+      <div class="btn-box box2">
+        <div class="ele2"></div>
+      </div>
     </demo-block>
     <demo-block card title="急促抖动新用法">
-      <div class="btn-box box3"></div>
+      <div class="btn-box box3">
+        <div class="ele2"></div>
+      </div>
     </demo-block>
     <demo-block card title="急促抖动自定义">
-      <div class="btn-box box4"></div>
+      <div class="btn-box box4">
+        <div class="ele2"></div>
+      </div>
     </demo-block>
   </demo-section>
 </template>
@@ -24,13 +32,16 @@
 @import '../../styles/index.less';
 .btn-box {
   width: 440px;
-  height: 160px;
+  height: 180px;
   margin: 0 auto;
   margin-top: 20px;
   margin-bottom: 20px;
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  background-color: #ddd;
+  // background-color: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .box1 {
   // #region css1

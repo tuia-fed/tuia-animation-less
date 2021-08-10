@@ -2,11 +2,11 @@
   <demo-section class="demo-fadeIn">
     
     <demo-block card title="垂直移动">
-      <div :class="['btn-box', 'box1', action1 ? 'action' : '']"></div>
+      <div :class="['ele1', 'box1', action1 ? 'action' : '']"></div>
       <div class="button" @click="handleShow('action1')">开始动画</div>
     </demo-block>
     <demo-block card title="水平移动">
-      <div :class="['btn-box', 'box2', action2 ? 'action' : '']"></div>
+      <div :class="['ele1', 'box2', action2 ? 'action' : '']"></div>
       <div class="button" @click="handleShow('action2')">开始动画</div>
     </demo-block>
   </demo-section>
@@ -34,11 +34,6 @@ export default {
 </script>
 <style lang="less" scoped>
 @import '../../styles/index.less';
-.btn-box {
-  width: 200px;
-  height: 200px;
-  background-color: #d9d9d9;
-}
 .button {
   line-height: 64px;
   position: relative;

@@ -2,10 +2,10 @@
   <demo-section class="demo-rotate">
     
     <demo-block card title="基础用法">
-      <div class="btn-box box1"></div>
+      <div class="btn-box ele1 box1"></div>
     </demo-block>
     <demo-block card title="自定义用法">
-      <div class="btn-box box2"></div>
+      <div class="btn-box ele1 box2"></div>
     </demo-block>
   </demo-section>
 </template>
@@ -16,11 +16,6 @@
 </script>
 <style lang="less" scoped>
 @import '../../styles/index.less';
-@url: '//yun.tuisnake.com/h5-mami/bigCouponclose-modal-light.png';
-.btn-box {
-  .WH(336, 331);
-  .BG('@{url}');
-}
 .box1 {
   // #region css1
   .rotate()
