@@ -30,7 +30,7 @@ yarn add tuia-animate-less
 
 <br />
 
-## 基础使用
+## 基础使用(敬请期待)
 <br />
 
 在安装好`tuia-animate-less`后，给元素添加class `tuia_animate_animated` 以及所需的动画名称（不要忘记`animate_`前缀！）
@@ -65,7 +65,7 @@ import 'tuia-animation-less';
 <br />
 <br />
 
-## 使用 @keyframes
+## 使用 @keyframes(敬请期待)
 还有一种比较更加灵活的使用方式，比起 less 函数要更加灵活，可以直接使用提供的动画`keyframes`。您可以根据实际需要进行选择。
 ### 引用
 ```
