@@ -1,5 +1,5 @@
 # 快速开始
->animation.css致力于提供给程序员愉悦的动画开发体验。
+>tuia-animation-less致力于提供给程序员愉悦的动画开发体验。
 
 <br />
 
