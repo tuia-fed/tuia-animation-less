@@ -7,6 +7,9 @@
     <demo-block card title="less 函数">
       <div ref="demo1" :class="{'ele1': true, 'box2': isBounce2}" @click="bounce('isBounce2')"></div>
     </demo-block>
+    <demo-block card title="@keyframes">
+      <div ref="demo1" :class="{'ele1': true, 'tuia_animate_animated': true, 'box3': isBounce3}" @click="bounce('isBounce3')"></div>
+    </demo-block>
   </demo-section>
 </template>
 <script>
@@ -16,7 +19,8 @@ export default {
   data() {
     return {
       isBounce: false,
-      isBounce2: false
+      isBounce2: false,
+      isBounce3: false
     }
   },
   mounted() {
@@ -24,6 +28,7 @@ export default {
       setTimeout(() => {
         this.isBounce = true
         this.isBounce2 = true
+        this.isBounce3 = true
       }, 0)
     })
   },
@@ -40,9 +45,16 @@ export default {
 </script>
 <style lang="less" scoped>
 @import '../../styles/index.less';
- // #region css1
 .box2 {
+// #region css1
   .bounce();
-}
 // #endregion css1
+}
+.box3 {
+// #region css2
+  animation: bounce;
+  animation-duration: 1s;
+// #endregion css2
+}
+
 </style>

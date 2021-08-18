@@ -185,11 +185,11 @@
     }
   }
 }
-.bounce() {
+.bounce(@durantion: 1s) {
   .bounceFrame(~`'tuia-bounce_'+Math.round(Math.random() * 1.0e8)`);
 }
 .bounceFrame(@name) {
-  animation-duration: 1s;
+  animation-duration: @durantion;
   animation-name: @name;
   -webkit-transform-origin: center bottom;
   transform-origin: center bottom;
