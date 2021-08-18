@@ -25,10 +25,11 @@ export default {
   &__title {
     margin: 0;
     padding: 32px 16px 16px;
-    color: rgba(69, 90, 100, 0.6);
+    color: rgba(69, 90, 100, 0.8);
     font-weight: normal;
     font-size: 14px;
     line-height: 16px;
+    font-weight: 600;
   }
 
   &__card {
