@@ -47,3 +47,20 @@
   animation-name: bounce;
   transform-origin: center bottom;
 }
+
+@keyframes breathe {
+  0%,
+    100% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(0.95);
+    }
+}
+.tuia_animate_breathe {
+  animation-name: breathe;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+}

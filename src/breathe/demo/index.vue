@@ -1,7 +1,9 @@
 <template>
   <demo-section class="demo-shake">
-    
     <demo-block card title="基础用法">
+      <div ref="demo1" class="tuia_animate_animated tuia_animate_breathe ele1 box1"></div>
+    </demo-block>
+    <demo-block card title="less函数">
       <div class="btn-box ele1 box1"></div>
     </demo-block>
     <demo-block card title="自定义动画完成所需时间">
@@ -12,6 +14,9 @@
     </demo-block>
     <demo-block card title="自定义动画速度曲线">
       <div class="btn-box ele1 box4"></div>
+    </demo-block>
+    <demo-block card title="@keyframes">
+      <div ref="demo1" class="tuia_animate_animated ele1 box5"></div>
     </demo-block>
   </demo-section>
 </template>
@@ -41,5 +46,13 @@
   // #region css4
   .breathe(0.95, 0.7s, ease-in-out);
   // #endregion css4
+}
+.box5 {
+  // #region css5
+  animation: breathe;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+  // #endregion css5
 }
 </style>
