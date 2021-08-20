@@ -1,6 +1,8 @@
 <template>
   <demo-section class="demo-fadeIn">
-    
+    <demo-block card title="基础用法">
+      <div :class="{'tuia_animate_animated': true, 'tuia_animate_fadeIn': active, 'ele1': true }" @click="handleEvent"></div>
+    </demo-block>
     <demo-block card title="基础用法">
       <div class="btn-box box1" v-show="showMask1" @click="showMask1 = false"></div>
       <div class="button" @click="showMask1 = !showMask1">点击出现</div>
@@ -18,9 +20,18 @@ export default {
   data() {
     return {
       showMask1: false,
-      showMask2: false
+      showMask2: false,
+      active: false
     }
-  }
+  },
+  methods: {
+    handleEvent() {
+      this.active = false
+      setTimeout(() => {
+        this.active = true
+      }, 0)
+    }
+  },
 }
 // #endregion js
 </script>
