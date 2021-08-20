@@ -1,7 +1,7 @@
 <template>
   <demo-section class="demo-shake">
     <demo-block card title="基础用法">
-      <div ref="demo1" class="tuia_animate_animated tuia_animate_breathe ele1 box1"></div>
+      <div class="tuia_animate_animated tuia_animate_breathe ele1 box1"></div>
     </demo-block>
     <demo-block card title="less函数">
       <div class="btn-box ele1 box1"></div>
@@ -16,7 +16,7 @@
       <div class="btn-box ele1 box4"></div>
     </demo-block>
     <demo-block card title="@keyframes">
-      <div ref="demo1" class="tuia_animate_animated ele1 box5"></div>
+      <div class="tuia_animate_animated ele1 box5"></div>
     </demo-block>
   </demo-section>
 </template>
