@@ -79,3 +79,141 @@
   animation-duration: 0.7s;
   animation-fill-mode: forwards;
 }
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+.tuia_animate_fadeOut {
+  animation-name: fadeOut;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes moveX {
+  0% {
+    transform: translateX(0)
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+.tuia_animate_moveX {
+  animation-name: moveX;
+  animation-duration: 0.3s;
+  animation-timing-function: ease;
+}
+
+@keyframes moveY {
+  0% {
+    transform: translateY(100%)
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+.tuia_animate_moveY {
+  animation-name: moveY;
+  animation-duration: 0.3s;
+  animation-timing-function: ease;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.tuia_animate_rotate {
+  animation-name: rotate;
+  animation-duration: 9s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes wave {
+  0%,
+  40%,
+  80%,
+  100% {
+    transform: rotate(0);
+  }
+
+  20%,
+  60% {
+    transform: rotate(30deg);
+  }
+}
+.tuia_animate_wave {
+  animation-name: wave;
+  animation-duration: 0.6s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  from,
+  80% {
+    transform: rotate(0);
+  }
+
+  20% {
+    transform: rotate(6deg);
+  }
+
+  45% {
+    transform: rotate(-4deg);
+  }
+
+  60% {
+    transform: rotate(2deg);
+  }
+}
+.tuia_animate_shake {
+  animation-name: shake;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shakeHurried {
+  0%,
+  to {
+    transform: translateZ(0);
+  }
+
+  10%,
+  20% {
+    transform: rotate(-3deg) translateZ(0);
+  }
+
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: rotate(3deg) translateZ(0);
+  }
+
+  40%,
+  60%,
+  80% {
+    transform: rotate(-3deg) translateZ(0);
+  }
+}
+.tuia_animate_shakeHurried {
+  animation-name: shakeHurried;
+  animation-duration: 0.6s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: 0.3s;
+  animation-direction: alternate;
+}

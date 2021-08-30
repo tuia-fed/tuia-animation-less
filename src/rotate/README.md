@@ -8,17 +8,31 @@ level: 1
 ## 介绍
 * 元素旋转
 
+<br />
+
 # 代码演示
 
-## 默认
+## 基础
+```
+<div class="tuia_animate_animated tuia_animate_rotate"></div>
+```
+<br />
+
+## less函数
 
 <<< @/src/rotate/demo/index.vue#css1
 
 <br />
 
-## 自定义
+## less函数自定义
 
 <<< @/src/rotate/demo/index.vue#css2
+
+<br />
+
+## @keyframes
+
+<<< @/src/rotate/demo/index.vue#css3
 
 <br />
 
@@ -36,3 +50,7 @@ level: 1
 | direction | 指示动画是否反向播放  | string | normarl |
 | fill-mode | 设置动画在执行之前和之后如何将样式应用于其目标,可选值 `none`、`forward`、`backwards`、`both`、`initial`、`inherit` | string | none |
 <br />
+
+# Code
+
+<iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" frameborder="0" height="300" width="100%" scrolling="no" style="width: 100%; overflow:hidden; display:block;" loading="lazy" src="https://codepen.io/xieshiyi/embed/ExXVqZv?height=265&theme-id=dark&default-tab=css%2Cresult&user=eltonmesquita&slug-hash=oNjGGbw&pen-title=Prefers-reduce-motion%20media%20query&name=cp_embed_1"></iframe>

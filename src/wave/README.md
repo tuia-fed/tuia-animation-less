@@ -8,23 +8,38 @@ level: 1
 ## 介绍
 * 常用于大转盘或者刮刮卡手势动画
 
+<br />
+
+
 # 代码演示
 
-## 默认
+## 基础
+```
+<div class="tuia_animate_animated tuia_animate_wave"></div>
+```
+<br />
+
+## less函数
 
 <<< @/src/wave/demo/index.vue#css1
 
 <br />
 
-## 自定义动画完成所需时间
+## less函数自定义动画完成所需时间
 
 <<< @/src/wave/demo/index.vue#css2
 
 <br />
 
-## 自定义手势幅度
+## less函数自定义手势幅度
 
 <<< @/src/wave/demo/index.vue#css3
+
+<br />
+
+## @keyframes
+
+<<< @/src/wave/demo/index.vue#css4
 
 <br />
 
@@ -38,3 +53,7 @@ level: 1
 | fromRotate     | 元素挥动开始的角度                   | number           | 0       |
 | toRotate        |元素挥动结束的角度                   | number          | 30deg |
 <br />
+
+# Code
+
+<iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" frameborder="0" height="300" width="100%" scrolling="no" style="width: 100%; overflow:hidden; display:block;" loading="lazy" src="https://codepen.io/xieshiyi/embed/powgzra?height=265&theme-id=dark&default-tab=css%2Cresult&user=eltonmesquita&slug-hash=oNjGGbw&pen-title=Prefers-reduce-motion%20media%20query&name=cp_embed_1"></iframe>

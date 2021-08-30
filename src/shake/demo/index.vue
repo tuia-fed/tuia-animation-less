@@ -1,23 +1,42 @@
 <template>
   <demo-section class="demo-shake">
-    
     <demo-block card title="基础用法">
+      <div class="btn-box">
+        <div class="tuia_animate_animated tuia_animate_shake ele2"></div>
+      </div>
+    </demo-block>
+    <demo-block card title="基础用法急剧抖动">
+      <div class="btn-box">
+        <div class="tuia_animate_animated tuia_animate_shakeHurried ele2"></div>
+      </div>
+    </demo-block>
+    <demo-block card title="less函数">
       <div class="btn-box box1">
         <div class="ele2"></div>
       </div>
     </demo-block>
-    <demo-block card title="自定义用法">
+    <demo-block card title="less函数自定义用法">
       <div class="btn-box box2">
         <div class="ele2"></div>
       </div>
     </demo-block>
-    <demo-block card title="急促抖动新用法">
+    <demo-block card title="less函数急促抖动新用法">
       <div class="btn-box box3">
         <div class="ele2"></div>
       </div>
     </demo-block>
-    <demo-block card title="急促抖动自定义">
+    <demo-block card title="less函数急促抖动自定义">
       <div class="btn-box box4">
+        <div class="ele2"></div>
+      </div>
+    </demo-block>
+    <demo-block card title="@keyframes">
+      <div class="btn-box box5">
+        <div class="ele2"></div>
+      </div>
+    </demo-block>
+    <demo-block card title="@keyframes急剧抖的">
+      <div class="btn-box box6">
         <div class="ele2"></div>
       </div>
     </demo-block>
@@ -62,5 +81,21 @@
   // #region css4
   .shakeHurried(0.8s)
   // #endregion css4
+}
+.box5 {
+  // #region css5
+  animation-name: shake;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  // #endregion css5
+}
+.box6 {
+  // #region css6
+  animation-name: shakeHurried;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  // #endregion css6
 }
 </style>

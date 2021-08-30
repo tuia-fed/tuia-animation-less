@@ -1,13 +1,25 @@
 <template>
   <demo-section class="demo-fadeIn">
-    
-    <demo-block card title="垂直移动">
-      <div :class="['ele1', 'box1', action1 ? 'action' : '']"></div>
-      <div class="button" @click="handleShow('action1')">开始动画</div>
+    <demo-tip card text="想看效果，请点击" class="flex">
+      <div class="tip ele1"></div>
+    </demo-tip>
+    <demo-block card title="基础用法-水平移动">
+      <div :class="{'tuia_animate_animated': true, 'tuia_animate_moveX': activeX, 'ele1': true }" @click="handleShow('activeX')"></div>
     </demo-block>
-    <demo-block card title="水平移动">
-      <div :class="['ele1', 'box2', action2 ? 'action' : '']"></div>
-      <div class="button" @click="handleShow('action2')">开始动画</div>
+    <demo-block card title="基础用法-垂直移动">
+      <div :class="{'tuia_animate_animated': true, 'tuia_animate_moveY': activeY, 'ele1': true }" @click="handleShow('activeY')"></div>
+    </demo-block>
+    <demo-block card title="less函数-水平移动">
+      <div :class="['ele1', 'box2', action2 ? 'action' : '']" @click="handleShow('action2')"></div>
+    </demo-block>
+    <demo-block card title="less函数-垂直移动">
+      <div :class="['ele1', 'box1', action1 ? 'action' : '']" @click="handleShow('action1')"></div>
+    </demo-block>
+    <demo-block card title="@keyframes-水平移动">
+      <div :class="{'ele1': true, 'tuia_animate_animated': true, 'box3': isActiveKeyframesX}" @click="handleShow('isActiveKeyframesX')"></div>
+    </demo-block>
+    <demo-block card title="@keyframes-垂直移动">
+      <div :class="{'ele1': true, 'tuia_animate_animated': true, 'box4': isActiveKeyframesY}" @click="handleShow('isActiveKeyframesY')"></div>
     </demo-block>
   </demo-section>
 </template>
@@ -17,8 +29,12 @@ export default {
   name: 'move',
   data() {
     return {
+      activeX: false,
+      activeY: false,
       action1: false,
-      action2: false
+      action2: false,
+      isActiveKeyframesX: false,
+      isActiveKeyframesY: false
     }
   },
   methods: {
@@ -26,7 +42,10 @@ export default {
       this[key] = !this[key]
       setTimeout(() => {
         this[key] = true
-      }, 200)
+      }, 0)
+      setTimeout(() => {
+        this[key] = false
+      }, 1000)
     }
   }
 }
@@ -67,5 +86,23 @@ export default {
   // #region css2
   .move_x();
   // #endregion css2
+}
+.box3 {
+  // #region css3
+  animation-name: moveX;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  // #endregion css3
+}
+.box4 {
+  // #region css4
+  animation-name: moveY;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  // #endregion css4
+}
+.tip {
+  width: 50px;
+  height: 50px;
 }
 </style>

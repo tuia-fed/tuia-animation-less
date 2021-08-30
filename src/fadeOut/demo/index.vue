@@ -1,13 +1,19 @@
 <template>
   <demo-section class="demo-fadeOut">
-    
+    <demo-tip card text="想看效果，请点击" class="flex">
+      <div class="tip ele1"></div>
+    </demo-tip>
     <demo-block card title="基础用法">
-      <div :class="['btn-box', 'box1', box1Active ? 'active': '']"></div>
-      <div class="button" @click="handleReset(0)">{{box1Active ? '重置' : '点击消失'}}</div>
+      <div :class="{'tuia_animate_animated': true, 'tuia_animate_fadeOut': active, 'ele1': true }" @click="handleEvent"></div>
+    </demo-block>
+    <demo-block card title="基础用法">
+      <div :class="['btn-box', 'ele1', 'box1', box1Active ? 'active': '']" @click="handleReset(0)"></div>
     </demo-block>
     <demo-block card title="自定义用法">
-      <div :class="['btn-box', 'box2', box2Actice ? 'active': '']"></div>
-      <div class="button" @click="handleReset(2)">{{ box2Actice ? '重置' : '点击消失'}}</div>
+      <div :class="['btn-box', 'ele1', 'box2', box2Actice ? 'active': '']" @click="handleReset(2)"></div>
+    </demo-block>
+    <demo-block card title="@keyframes">
+      <div :class="{'ele1': true, 'tuia_animate_animated': true, 'box3': isActiveKeyframes}" @click="handleKeyframseEvent"></div>
     </demo-block>
   </demo-section>
 </template>
@@ -17,19 +23,39 @@ export default {
   name: 'fadeOut',
   data() {
     return {
+      active: false,
       showMask1: true,
       showMask2: false,
       box1Active: false,
-      box2Actice: false
+      box2Actice: false,
+      isActiveKeyframes: false
     }
   },
   methods: {
     handleReset (index) {
       if(index === 0 ){
-        this.box1Active = !this.box1Active
+        this.box1Active = true
+        setTimeout(() => {
+          this.box1Active = false
+        }, 800)
       } else {
-        this.box2Actice = !this.box2Actice
+        this.box2Actice = true
+        setTimeout(() => {
+          this.box2Actice = false
+        }, 800)
       }
+    },
+    handleEvent() {
+      this.active = true
+      setTimeout(() => {
+        this.active = false
+      }, 800)
+    },
+    handleKeyframseEvent() {
+      this.isActiveKeyframes = true
+      setTimeout(() => {
+        this.isActiveKeyframes = false
+      }, 800)
     }
   },
 }
@@ -39,7 +65,7 @@ export default {
 @import '../../styles/index.less';
 .btn-box {
   .WH(200,200);
-  background-color: rgb(83, 80, 80);
+  // background-color: rgb(83, 80, 80);
   opacity: 1;
 }
 .button {
@@ -75,5 +101,16 @@ export default {
   // #region css2
   .fadeOut(1s);
   // #endregion css2
+}
+.box3 {
+  // #region css3
+  animation-name: fadeOut;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+  // #endregion css3
+}
+.tip {
+  width: 50px;
+  height: 50px;
 }
 </style>

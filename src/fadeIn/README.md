@@ -10,17 +10,32 @@ level: 1
 
 # 代码演示
 
-## 默认
+## 基础
+
+```
+<div class="tuia_animate_animated tuia_animate_fadeIn"></div>
+```
+
+<br />
+
+## less函数
 
 <<< @/src/fadeIn/demo/index.vue#css1
 
 <br />
 
-## 自定义
+## less函数自定义
 
 <<< @/src/fadeIn/demo/index.vue#css2
 
 <br />
+
+## @keyframes
+
+<<< @/src/fadeIn/demo/index.vue#css3
+
+<br />
+
 
 # API
 
@@ -30,3 +45,7 @@ level: 1
 | ---------- | ----------------------------- | ------------------ | ---------- |
 | duration       | 动画完成所需时间                 | number           | 0.2s  |
 <br />
+
+# Code
+
+<iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" frameborder="0" height="300" width="100%" scrolling="no" style="width: 100%; overflow:hidden; display:block;" loading="lazy" src="https://codepen.io/xieshiyi/embed/eYRpwoJ?height=265&theme-id=dark&default-tab=css%2Cresult&user=eltonmesquita&slug-hash=oNjGGbw&pen-title=Prefers-reduce-motion%20media%20query&name=cp_embed_1"></iframe>

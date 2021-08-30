@@ -1,6 +1,8 @@
 <template>
   <demo-section class="demo-shake">
-    
+    <demo-tip card text="想看效果，请点击" class="flex">
+      <div class="tip ele1"></div>
+    </demo-tip>
     <demo-block card title="基础用法">
       <div ref="demo1" :class="{'tuia_animate_animated': true, 'tuia_animate_bounce': isBounce, 'ele1': true, 'box1': true}" @click="bounce('isBounce')"></div>
     </demo-block>
@@ -56,5 +58,8 @@ export default {
   animation-duration: 1s;
 // #endregion css2
 }
-
+.tip {
+  width: 50px;
+  height: 50px;
+}
 </style>

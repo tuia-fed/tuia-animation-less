@@ -1,15 +1,21 @@
 <template>
   <demo-section class="demo-fadeIn">
+    <demo-tip card text="想看效果，请点击" class="flex">
+      <div class="tip ele1"></div>
+    </demo-tip>
     <demo-block card title="基础用法">
       <div :class="{'tuia_animate_animated': true, 'tuia_animate_fadeIn': active, 'ele1': true }" @click="handleEvent"></div>
     </demo-block>
-    <demo-block card title="基础用法">
+    <demo-block card title="less函数">
       <div class="btn-box box1" v-show="showMask1" @click="showMask1 = false"></div>
-      <div class="button" @click="showMask1 = !showMask1">点击出现</div>
+      <div class="ele1" @click="showMask1 = !showMask1"></div>
     </demo-block>
-    <demo-block card title="自定义用法">
+    <demo-block card title="less函数自定义">
       <div class="btn-box box2" v-show="showMask2" @click="showMask2 = false"></div>
-      <div class="button" @click="showMask2 = !showMask2">点击出现</div>
+      <div class="ele1" @click="showMask2 = !showMask2"></div>
+    </demo-block>
+    <demo-block card title="@keyframes">
+      <div :class="{'ele1': true, 'tuia_animate_animated': true, 'box3': isActiveKeyframes}" @click="handleKeyframseEvent"></div>
     </demo-block>
   </demo-section>
 </template>
@@ -21,7 +27,8 @@ export default {
     return {
       showMask1: false,
       showMask2: false,
-      active: false
+      active: false,
+      isActiveKeyframes: false
     }
   },
   methods: {
@@ -30,8 +37,14 @@ export default {
       setTimeout(() => {
         this.active = true
       }, 0)
+    },
+    handleKeyframseEvent() {
+      this.isActiveKeyframes = false
+      setTimeout(() => {
+        this.isActiveKeyframes = true
+      }, 0)
     }
-  },
+  }
 }
 // #endregion js
 </script>
@@ -46,29 +59,6 @@ export default {
   z-index: 1;
   background: rgba(0, 0, 0, 0.85);
 }
-.button {
-  line-height: 64px;
-  position: relative;
-  display: inline-block;
-  white-space: nowrap;
-  text-align: center;
-  box-shadow: 0 3px 0 rgb(0 0 0 / 2%);
-  cursor: pointer;
-  transition: all .3s cubic-bezier(.645,.045,.355,1);
-  height: 64px;
-  padding: 0 30px;
-  user-select: none;
-  font-size: 28px;
-  border-radius: 8px;
-  color: rgba(0,0,0,.65);
-  background-color: #fff;
-  border: 1px solid #d9d9d9;
-  &:hover {
-    color: #40a9ff;
-    border-color: #40a9ff;
-    background-color: #fff;
-  }
-}
 .box1 {
   // #region css1
   .fadeIn();
@@ -78,5 +68,16 @@ export default {
   // #region css2
   .fadeIn(1s);
   // #endregion css2
+}
+.box3 {
+  // #region css3
+  animation-name: fadeIn;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  // #endregion css3
+}
+.tip {
+  width: 50px;
+  height: 50px;
 }
 </style>
