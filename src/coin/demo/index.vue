@@ -1,10 +1,13 @@
 <template>
   <demo-section class="demo-sparks">
-    
     <demo-block card title="基础用法">
+      <div class="tuia_animate_animated tuia_animate_coin" v-show="active"></div>
+      <div class="button" @click="handleBtnClick('active')">点击出现</div>
+    </demo-block>
+    <!-- <demo-block card title="less函数">
       <div class="box box1" v-show="show1"></div>
       <div class="button" @click="handleBtnClick('show1')">点击出现</div>
-    </demo-block>
+    </demo-block> -->
     <demo-block card title="倒置金币方向">
       <div class="box box2" v-show="show2"></div>
       <div class="button" @click="handleBtnClick('show2')">点击出现</div>
@@ -21,6 +24,7 @@ export default {
   name: 'sparks',
   data() {
     return {
+      active: false,
       show1: false,
       show2: false,
       show3: false
@@ -87,5 +91,31 @@ export default {
   // #region css3
   .coin2()
   // #endregion css3
+}
+.box4 {
+  position: absolute;
+  bottom: -430px;
+  left: 380px;
+  // #region css4
+  // 第一种金币
+  width: 200px;
+  height: 600px;
+  background-image: url('//yun.tuisnake.com/h5-mani/turncard_mix/174a5f04-1c9c-4387-8f63-1936ccb230bd.png');
+  background-size: 4600px 600px;
+  animation: coin 0.92s steps(1) both;
+  // #endregion css4
+}
+.box5 {
+  position: absolute;
+  bottom: -280px;
+  left: 300px;
+  // #region css5
+  // 第二种金币
+  width: 300px;
+  height: 400px;
+  background-image: url('//yun.tuisnake.com/h5-mani/turncard_mix/06715b73-3cf0-4c0f-a62c-fceaccbe845f.png');
+  background-size: 4800px 1200px;
+  animation: coin2 0.92s steps(1) both;
+  // #endregion css5
 }
 </style>

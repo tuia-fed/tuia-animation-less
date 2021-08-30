@@ -1,11 +1,18 @@
 <template>
   <demo-section class="demo-sparks">
-    
     <demo-block card title="基础用法">
+      <div class="box tuia_animate_animated tuia_animate_sparks" v-show="active"></div>
+      <div class="button" @click="handleBtnClick('active')">点击出现</div>
+    </demo-block>
+    <demo-block card title="基础用法光火花">
+      <div class="box tuia_animate_animated tuia_animate_sparksLight" v-show="active2"></div>
+      <div class="button" @click="handleBtnClick('active2')">点击出现</div>
+    </demo-block>
+    <demo-block card title="less函数">
       <div class="box box1" v-show="show1"></div>
       <div class="button" @click="handleBtnClick('show1')">点击出现</div>
     </demo-block>
-    <demo-block card title="光火花">
+    <demo-block card title="less函数光火花">
       <div class="box box2" v-show="show2"></div>
       <div class="button" @click="handleBtnClick('show2')">点击出现</div>
     </demo-block>
@@ -17,8 +24,11 @@ export default {
   name: 'sparks',
   data() {
     return {
+      active: false,
+      active2: false,
       show1: false,
-      show2: false
+      show2: false,
+      show3: false
     }
   },
   methods: {
@@ -75,5 +85,20 @@ export default {
   // #region css2
   .sparksLight();
   // #endregion css2
+}
+.box3 {
+  // #region css3
+  .WH(500, 500);
+  animation-name: sparks;
+  animation-duration: 0.4s;
+  animation-timing-function: steps(1);
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  background-image: url('//yun.tuisnake.com/mami-media/img/e9064d2f-3644-413b-b62b-d8451f5fe76a.png');
+  background-repeat: no-repeat;
+  background-position: -10000px -10000px;
+  background-size: 400% 300%;
+  transform: scale(1.8);
+  // #endregion css3
 }
 </style>
