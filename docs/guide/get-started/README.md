@@ -51,6 +51,8 @@ import 'tuia-animation-less';
 <br />
 
 ## 使用 less 函数
+需要支持less函数，在 `webpack.config.js` 或者 `vue.config.js` 中设置 `javascriptEnabled: true`。
+
 即使该库为您提供了一些帮助类，例如`tuia_animated`让您快速运行的类，您也可以直接使用提供的动画`less函数`。这提供了一种灵活的方式将`tuia_animate_animated`用于您当前的项目，而无需重构您的HTML代码。
 
 ### 引用

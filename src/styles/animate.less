@@ -206,3 +206,20 @@
   animation-delay: 0.3s;
   animation-direction: alternate;
 }
+
+@keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+.tuia_animate_flash {
+  animation-name: flash;
+}
