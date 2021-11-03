@@ -9,11 +9,11 @@
 ## 2. 安装
 
 ```
-npm install tuia-animate-less --save
+npm install tuia-animation-less --save
 ```
 或者
 ```
-yarn add tuia-animate-less
+yarn add tuia-animation-less
 ```
 或者直接在网页中使用cdn
 ```
