@@ -130,6 +130,25 @@
   animation-duration:@duration;
   animation-fill-mode:forwards;
 }
+// 向上淡出
+.fadeOutUp(@duration: 0.4s) {
+  .fadeOutUpFrame(~`'tuia-fadeOutUp_'+Math.round(Math.random() * 1.0e8)`)
+}
+.fadeOutUpFrame(@name) {
+  animation-name:@name;
+  animation-duration:@duration;
+  animation-fill-mode:forwards;
+  @keyframes @name {
+    from {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+      transform: translate3d(0, -100%, 0);
+    }
+  }
+}
 // 挥动
 .wave(@duration: 0.6s, @fromRotate: 0, @toRotate: 30deg) {
   pointer-events: none;

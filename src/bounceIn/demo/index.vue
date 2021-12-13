@@ -17,7 +17,7 @@
 <script>
 // #region js
 export default {
-  name: 'bounce',
+  name: 'bounceIn',
   data() {
     return {
       isBounce: false,
