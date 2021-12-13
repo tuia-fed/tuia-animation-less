@@ -34,7 +34,7 @@ export default {
 
   &__card {
     margin: 12px 12px 0;
-    overflow: hidden;
+    // overflow: hidden;
     // border-radius: 8px;
   }
 
