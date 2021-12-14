@@ -112,6 +112,26 @@
   animation-duration:@duration;
   animation-fill-mode:forwards;
 }
+// 从左淡入
+.fadeInLeft(@duration: 0.2s) {
+  .fadeInLeftFrame(~`'tuia-fadeInLeft_'+Math.round(Math.random() * 1.0e8)`)
+}
+.fadeInLeftFrame(@name) {
+  @keyframes @name {
+    from {
+      opacity: 0;
+      transform: translate3d(-100%, 0, 0);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  animation-name:@name;
+  animation-duration:@duration;
+  animation-fill-mode:forwards;
+}
 // 从右淡入
 .fadeInRight(@duration: 0.2s) {
   .fadeInRightFrame(~`'tuia-fadeInRight_'+Math.round(Math.random() * 1.0e8)`)

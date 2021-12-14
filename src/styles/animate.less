@@ -82,7 +82,21 @@
 .tuia_animate_fadeInRight {
   animation-name: fadeInRight;
 }
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
 
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.tuia_animate_fadeInLeft {
+  animation-name: fadeInLeft;
+}
 @keyframes fadeOut {
   0% {
     opacity: 1;
