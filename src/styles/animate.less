@@ -359,3 +359,20 @@
   animation-duration: calc(var(--animate-duration) * 0.75);
   animation-name: bounceOut;
 }
+// 漂浮
+@keyframes float {
+  25% {
+    transform: translateY(-4px);
+  }
+  50%, 100% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(4px);
+  }
+}
+.tuia_animate_float {
+  animation-duration: calc(var(--animate-duration) * 0.75);
+  animation-name: float;
+  animation-iteration-count: infinite;
+}

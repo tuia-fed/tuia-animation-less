@@ -418,3 +418,23 @@
 .bounceOut(@duration: 1s) {
   .bounceOutFrames(~`'tuia-bounceOut_'+Math.round(Math.random() * 1.0e8)`);
 }
+
+.floatFrames(@name) {
+  animation-name: @name;
+  animation-duration: calc((@duration) * 0.75);
+  animation-iteration-count: infinite;
+  @keyframes @name {
+    25% {
+      transform: translateY(unit(-1 * @y, px));
+    }
+    50%, 100% {
+      transform: translateY(0);
+    }
+    75% {
+      transform: translateY(unit(@y, px));
+    }
+  }
+}
+.float(@duration: 1s, @y: 4) {
+  .floatFrames(~`'tuia-float_'+Math.round(Math.random() * 1.0e8)`);
+}
