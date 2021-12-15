@@ -104,9 +104,10 @@
 }
 
 .sparksLight {
+  width: 500px;
+  height: 500px;
   .BG('//yun.tuisnake.com/h5-mami/GoldMining_Video/firstSparkSprites.5d7e57.png');
   background-size: 2500px 1000px;
-  transform: scale(2);
   .sparksLightFrame(~`'tuia-sparks_light_'+Math.round(Math.random() * 1.0e8)`)
   
 }
@@ -346,4 +347,52 @@
   background-image: url('//yun.tuisnake.com/h5-mani/turncard_mix/06715b73-3cf0-4c0f-a62c-fceaccbe845f.png');
   background-size: 4800px 1200px;
   animation: coin2 0.92s steps(1) both;
+}
+
+.sparks1 {
+  .sparks1Frame(~`'tuia-sparks1_'+Math.round(Math.random() * 1.0e8)`);
+  width: 391px;
+  height: 291px;
+  // background-image: url('//yun.tuisnake.com/animation/ad165f7c-059d-4884-960d-7e3307d3d11c.png');
+  background-image: url('//yun.tuisnake.com/h5-mami/activity/clickredrain2/1791a03b-2c94-4e62-969c-e843991746be.png');
+  background-repeat: no-repeat;
+  background-position: 391px 0;
+  background-size: 1955px 291px;
+}
+// .sparks1Frame(@name) {
+//   @keyframes @name {
+//     0% { background-position: 0px 0px; }
+//     25.00% { background-position: -150px 0px; }
+//     50.00% { background-position: -300px 0px; }
+//     75.00% { background-position: -450px 0px; }
+//     100.00% { background-position: -600px 0px; }
+//   }
+//   animation: @name  0.17s steps(1) 1;;
+// }
+.sparks1Frame(@name) {
+  @keyframes @name {
+    0% { background-position: 0 0; }
+    25.00% { background-position: -391px 0; }
+    50.00% { background-position: -782px 0; }
+    75.00% { background-position: -1173px 0; }
+    100.00% { background-position: -1564px 0; }
+  }
+  animation: @name  0.27s steps(1) 1;;
+}
+@keyframes sparks1{
+  0% { background-position: 0 0; }
+  25.00% { background-position: -391px 0; }
+  50.00% { background-position: -782px 0; }
+  75.00% { background-position: -1173px 0; }
+  100.00% { background-position: -1564px 0; }
+}
+.tuia_animate_sparks1 {
+  width: 391px !important;
+  height: 291px !important;
+  // background-image: url('//yun.tuisnake.com/animation/ad165f7c-059d-4884-960d-7e3307d3d11c.png');
+  background-image: url('//yun.tuisnake.com/h5-mami/activity/clickredrain2/1791a03b-2c94-4e62-969c-e843991746be.png');
+  background-repeat: no-repeat;
+  background-position: 391px 0;
+  background-size: 1955px 291px;
+  animation: sparks1 0.27s steps(1) 1;
 }
