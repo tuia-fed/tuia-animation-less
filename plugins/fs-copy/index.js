@@ -6,7 +6,7 @@ const { resolvePath } = require('./utils')
 function start() {
   console.info('\nWatching file changes...');
 
-  const SRCDIR = resolvePath('../../src')
+  const SRCDIR = resolvePath('../../src/pages')
   const copyFn = async () => {
     try {
       await copy.getMdFile(SRCDIR)

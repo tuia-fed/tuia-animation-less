@@ -17,6 +17,7 @@ export default ({
   },
   computed: {
     title () {
+      console.log(this.$route)
       const { name } = this.$route.meta || {}
       return name ? name.replace(/-/g, '') : ''
     }
