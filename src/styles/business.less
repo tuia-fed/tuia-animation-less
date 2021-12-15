@@ -349,8 +349,8 @@
   animation: coin2 0.92s steps(1) both;
 }
 
-.sparks1 {
-  .sparks1Frame(~`'tuia-sparks1_'+Math.round(Math.random() * 1.0e8)`);
+.sparks3 {
+  .sparks3Frame(~`'tuia-sparks1_'+Math.round(Math.random() * 1.0e8)`);
   width: 391px;
   height: 291px;
   // background-image: url('//yun.tuisnake.com/animation/ad165f7c-059d-4884-960d-7e3307d3d11c.png');
@@ -359,7 +359,7 @@
   background-position: 391px 0;
   background-size: 1955px 291px;
 }
-// .sparks1Frame(@name) {
+// .sparks3Frame(@name) {
 //   @keyframes @name {
 //     0% { background-position: 0px 0px; }
 //     25.00% { background-position: -150px 0px; }
@@ -369,7 +369,7 @@
 //   }
 //   animation: @name  0.17s steps(1) 1;;
 // }
-.sparks1Frame(@name) {
+.sparks3Frame(@name) {
   @keyframes @name {
     0% { background-position: 0 0; }
     25.00% { background-position: -391px 0; }
@@ -379,14 +379,14 @@
   }
   animation: @name  0.27s steps(1) 1;;
 }
-@keyframes sparks1{
+@keyframes sparks3{
   0% { background-position: 0 0; }
   25.00% { background-position: -391px 0; }
   50.00% { background-position: -782px 0; }
   75.00% { background-position: -1173px 0; }
   100.00% { background-position: -1564px 0; }
 }
-.tuia_animate_sparks1 {
+.tuia_animate_sparks3 {
   width: 391px !important;
   height: 291px !important;
   // background-image: url('//yun.tuisnake.com/animation/ad165f7c-059d-4884-960d-7e3307d3d11c.png');
@@ -394,5 +394,5 @@
   background-repeat: no-repeat;
   background-position: 391px 0;
   background-size: 1955px 291px;
-  animation: sparks1 0.27s steps(1) 1;
+  animation: sparks3 0.27s steps(1) 1;
 }

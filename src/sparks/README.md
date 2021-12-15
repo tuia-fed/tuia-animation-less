@@ -40,7 +40,7 @@ level: 2
 // 爆炸效果2
 <div class="tuia_animate_animated tuia_animate_sparksLight"></div>
 // 爆炸效果3
-<div class="tuia_animate_animated tuia_animate_sparks1"></div>
+<div class="tuia_animate_animated tuia_animate_sparks3"></div>
 ```
 <br />
 

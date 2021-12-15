@@ -96,7 +96,7 @@ export default {
   // background-size: 400% 300%;
   // transform: scale(1.8);
   // #region css3
-  .sparks1();
+  .sparks3();
   // #endregion css3
 }
 </style>
