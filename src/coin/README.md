@@ -17,29 +17,21 @@ level: 2
 ```
 <br />
 
-## less函数
+## 金币1
 
 <<< @/src/coin/demo/index.vue#css1
 
 <br />
 
-## 倒置金币方向
+## 倒置金币1
 
 <<< @/src/coin/demo/index.vue#css2
 
 <br />
 
-## 第二种金币
+## 金币2
 
 <<< @/src/coin/demo/index.vue#css3
-
-<br />
-
-## @keyframes
-
-<<< @/src/coin/demo/index.vue#css4
-
-<<< @/src/coin/demo/index.vue#css5
 
 <br />
 

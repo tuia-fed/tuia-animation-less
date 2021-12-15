@@ -1,20 +1,13 @@
 <template>
   <demo-section class="demo-sparks">
-    <demo-block card title="基础用法">
-      <div class="tuia_animate_animated tuia_animate_coin" v-show="active"></div>
-      <div class="button" @click="handleBtnClick('active')">点击出现</div>
+    <demo-block card title="金币1">
+      <div class="box tuia_animate_animated tuia_animate_coin"></div>
     </demo-block>
-    <!-- <demo-block card title="less函数">
-      <div class="box box1" v-show="show1"></div>
-      <div class="button" @click="handleBtnClick('show1')">点击出现</div>
-    </demo-block> -->
-    <demo-block card title="倒置金币方向">
-      <div class="box box2" v-show="show2"></div>
-      <div class="button" @click="handleBtnClick('show2')">点击出现</div>
+    <demo-block card title="倒置金币1">
+      <div class="box box2"></div>
     </demo-block>
-    <demo-block card title="第二种金币">
-      <div class="box box3" v-show="show3"></div>
-      <div class="button" @click="handleBtnClick('show3')">点击出现</div>
+    <demo-block card title="金币2">
+      <div class="box box3"></div>
     </demo-block>
   </demo-section>
 </template>
@@ -44,9 +37,10 @@ export default {
 <style lang="less" scoped>
 @import '../../styles/index.less';
 .box {
-  .ABL(-430, 380);
+  // .ABL(-430, 380);
   .WH(200, 600);
-  z-index: 204;
+  // z-index: 204;
+  animation-iteration-count: infinite !important;
 }
 .button {
   line-height: 64px;
@@ -85,7 +79,7 @@ export default {
   // #endregion css2
 }
 .box3 {
-  .ABL(-280, 300);
+  // .ABL(-280, 300);
   .WH(300, 400);
 
   // #region css3
