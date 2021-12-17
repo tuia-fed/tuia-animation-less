@@ -35,7 +35,7 @@ export default {
 // #endregion js
 </script>
 <style lang="less" scoped>
-@import '../../../styles/index.less';
+@import '~@/styles/index.less';
 .box {
   // .ABL(-430, 380);
   .WH(200, 600);

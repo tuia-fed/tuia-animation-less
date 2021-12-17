@@ -1,6 +1,6 @@
 <template>
   <demo-section class="demo-fadeInRight">
-    <demo-tip card text="想看效果，请点击" class="flex">
+    <demo-tip card text="想看效果，请点击" class="demo-flex">
       <div class="tip ele1"></div>
     </demo-tip>
     <demo-block card title="基础用法">

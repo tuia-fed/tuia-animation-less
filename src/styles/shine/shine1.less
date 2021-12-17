@@ -1,0 +1,58 @@
+.shine1() {
+  width: 200px;
+  height: 200px;
+  background-image: url('//yun.tuisnake.com/animation/f3467f10-b5d4-4a9d-be22-4b19414ce0b6.png');
+  background-size: 3600px 200px;
+  .shine1Frame(~`'tuia-shine1_'+Math.round(Math.random() * 1.0e8)`)
+}
+.shine1Frame(@name) {
+  animation: @name 0.75s steps(1) both;
+
+  @keyframes @name {
+    0% { background-position: 0px 0px; }
+    5.88% { background-position: -200px 0px; }
+    11.76% { background-position: -400px 0px; }
+    17.65% { background-position: -600px 0px; }
+    23.53% { background-position: -800px 0px; }
+    29.41% { background-position: -1000px 0px; }
+    35.29% { background-position: -1200px 0px; }
+    41.18% { background-position: -1400px 0px; }
+    47.06% { background-position: -1600px 0px; }
+    52.94% { background-position: -1800px 0px; }
+    58.82% { background-position: -2000px 0px; }
+    64.71% { background-position: -2200px 0px; }
+    70.59% { background-position: -2400px 0px; }
+    76.47% { background-position: -2600px 0px; }
+    82.35% { background-position: -2800px 0px; }
+    88.24% { background-position: -3000px 0px; }
+    94.12% { background-position: -3200px 0px; }
+    100.00% { background-position: -3400px 0px; }
+  }
+}
+@keyframes shine1{
+  0% { background-position: 0px 0px; }
+	5.88% { background-position: -200px 0px; }
+	11.76% { background-position: -400px 0px; }
+	17.65% { background-position: -600px 0px; }
+	23.53% { background-position: -800px 0px; }
+	29.41% { background-position: -1000px 0px; }
+	35.29% { background-position: -1200px 0px; }
+	41.18% { background-position: -1400px 0px; }
+	47.06% { background-position: -1600px 0px; }
+	52.94% { background-position: -1800px 0px; }
+	58.82% { background-position: -2000px 0px; }
+	64.71% { background-position: -2200px 0px; }
+	70.59% { background-position: -2400px 0px; }
+	76.47% { background-position: -2600px 0px; }
+	82.35% { background-position: -2800px 0px; }
+	88.24% { background-position: -3000px 0px; }
+	94.12% { background-position: -3200px 0px; }
+	100.00% { background-position: -3400px 0px; }
+}
+.shine1 {
+  width: 200px;
+  height: 200px;
+  background-image: url('//yun.tuisnake.com/animation/f3467f10-b5d4-4a9d-be22-4b19414ce0b6.png');
+  background-size: 3600px 200px;
+  animation: shine1 0.75s steps(1);
+}

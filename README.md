@@ -7,12 +7,13 @@ yarn install
 
 ### Compiles and hot-reloads for development
 ```
-yarn run serve
+yarn serve
 ```
 
 ### Compiles and minifies for production
 ```
-yarn run build
+// 该命令会在 src/css 目录下生成 index.css 和 index.min.css 文件
+yarn css:build
 ```
 ### Links
 * [Home page](https://tuia-fed.github.io/tuia-animation-less/)

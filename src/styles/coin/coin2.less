@@ -1,0 +1,122 @@
+.coin2() {
+  background-image: url('//yun.tuisnake.com/h5-mani/turncard_mix/06715b73-3cf0-4c0f-a62c-fceaccbe845f.png');
+  background-size: 4800px 1200px;
+  .coin2Frame(~`'tuia-coin2_'+Math.round(Math.random() * 1.0e8)`)
+}
+.coin2Frame(@name) {
+  animation: @name 0.92s steps(1) both;
+
+  @keyframes @name {
+    0% {
+      background-position: 0 0;
+    }
+    2.44% { background-position: -300px 0; }
+    4.88% { background-position: -600px 0; }
+    7.32% { background-position: -900px 0; }
+    9.76% { background-position: -1200px 0; }
+    12.20% { background-position: -1500px 0; }
+    14.63% { background-position: -1800px 0; }
+    17.07% { background-position: -2100px 0; }
+    19.51% { background-position: -2400px 0; }
+    21.95% { background-position: -2700px 0; }
+    24.39% { background-position: -3000px 0; }
+    26.83% { background-position: -3300px 0; }
+    29.27% { background-position: -3600px 0; }
+    31.71% { background-position: -3900px 0; }
+    34.15% { background-position: -4200px 0; }
+    36.59% { background-position: -4500px 0; }
+    39.02% { background-position: 0 -400px; }
+    41.46% { background-position: -300px -400px; }
+    43.90% { background-position: -600px -400px; }
+    46.34% { background-position: -900px -400px; }
+    48.78% { background-position: -1200px -400px; }
+    51.22% { background-position: -1500px -400px; }
+    53.66% { background-position: -1800px -400px; }
+    56.10% { background-position: -2100px -400px; }
+    58.54% { background-position: -2400px -400px; }
+    60.98% { background-position: -2700px -400px; }
+    63.41% { background-position: -3000px -400px; }
+    65.85% { background-position: -3300px -400px; }
+    68.29% { background-position: -3600px -400px; }
+    70.73% { background-position: -3900px -400px; }
+    73.17% { background-position: -4200px -400px; }
+    75.61% { background-position: -4500px -400px; }
+    78.05% { background-position: 0 -800px; }
+    80.49% { background-position: -300px -800px; }
+    82.93% { background-position: -600px -800px; }
+    85.37% { background-position: -900px -800px; }
+    87.80% { background-position: -1200px -800px; }
+    90.24% { background-position: -1500px -800px; }
+    92.68% { background-position: -1800px -800px; }
+
+    95.45% {
+      background-position: -2100px -800px;
+      opacity: 1;
+    }
+
+    100.00% {
+      background-position: -2700px -800px;
+      opacity: 0;
+    }
+  }
+}
+@keyframes coin2{
+  0% {
+    background-position: 0 0;
+  }
+  2.44% { background-position: -300px 0; }
+  4.88% { background-position: -600px 0; }
+  7.32% { background-position: -900px 0; }
+  9.76% { background-position: -1200px 0; }
+  12.20% { background-position: -1500px 0; }
+  14.63% { background-position: -1800px 0; }
+  17.07% { background-position: -2100px 0; }
+  19.51% { background-position: -2400px 0; }
+  21.95% { background-position: -2700px 0; }
+  24.39% { background-position: -3000px 0; }
+  26.83% { background-position: -3300px 0; }
+  29.27% { background-position: -3600px 0; }
+  31.71% { background-position: -3900px 0; }
+  34.15% { background-position: -4200px 0; }
+  36.59% { background-position: -4500px 0; }
+  39.02% { background-position: 0 -400px; }
+  41.46% { background-position: -300px -400px; }
+  43.90% { background-position: -600px -400px; }
+  46.34% { background-position: -900px -400px; }
+  48.78% { background-position: -1200px -400px; }
+  51.22% { background-position: -1500px -400px; }
+  53.66% { background-position: -1800px -400px; }
+  56.10% { background-position: -2100px -400px; }
+  58.54% { background-position: -2400px -400px; }
+  60.98% { background-position: -2700px -400px; }
+  63.41% { background-position: -3000px -400px; }
+  65.85% { background-position: -3300px -400px; }
+  68.29% { background-position: -3600px -400px; }
+  70.73% { background-position: -3900px -400px; }
+  73.17% { background-position: -4200px -400px; }
+  75.61% { background-position: -4500px -400px; }
+  78.05% { background-position: 0 -800px; }
+  80.49% { background-position: -300px -800px; }
+  82.93% { background-position: -600px -800px; }
+  85.37% { background-position: -900px -800px; }
+  87.80% { background-position: -1200px -800px; }
+  90.24% { background-position: -1500px -800px; }
+  92.68% { background-position: -1800px -800px; }
+
+  95.45% {
+    background-position: -2100px -800px;
+    opacity: 1;
+  }
+
+  100.00% {
+    background-position: -2700px -800px;
+    opacity: 0;
+  }
+}
+.coin2 {
+  .ABL(-280, 300);
+  .WH(300, 400);
+  background-image: url('//yun.tuisnake.com/h5-mani/turncard_mix/06715b73-3cf0-4c0f-a62c-fceaccbe845f.png');
+  background-size: 4800px 1200px;
+  animation: coin2 0.92s steps(1) both;
+}

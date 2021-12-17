@@ -1,0 +1,36 @@
+.sparks3() {
+  .sparks3Frame(~`'tuia-sparks1_'+Math.round(Math.random() * 1.0e8)`);
+  width: 391px;
+  height: 291px;
+  background-image: url('//yun.tuisnake.com/h5-mami/activity/clickredrain2/1791a03b-2c94-4e62-969c-e843991746be.png');
+  background-repeat: no-repeat;
+  background-position: 391px 0;
+  background-size: 1955px 291px;
+}
+
+.sparks3Frame(@name) {
+  @keyframes @name {
+    0% { background-position: 0 0; }
+    25.00% { background-position: -391px 0; }
+    50.00% { background-position: -782px 0; }
+    75.00% { background-position: -1173px 0; }
+    100.00% { background-position: -1564px 0; }
+  }
+  animation: @name  0.27s steps(1) 1;;
+}
+@keyframes sparks3{
+  0% { background-position: 0 0; }
+  25.00% { background-position: -391px 0; }
+  50.00% { background-position: -782px 0; }
+  75.00% { background-position: -1173px 0; }
+  100.00% { background-position: -1564px 0; }
+}
+.sparks3 {
+  width: 391px !important;
+  height: 291px !important;
+  background-image: url('//yun.tuisnake.com/h5-mami/activity/clickredrain2/1791a03b-2c94-4e62-969c-e843991746be.png');
+  background-repeat: no-repeat;
+  background-position: 391px 0;
+  background-size: 1955px 291px;
+  animation: sparks3 0.27s steps(1) 1;
+}

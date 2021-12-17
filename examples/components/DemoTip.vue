@@ -15,7 +15,7 @@ export default {
   props: {
     card: Boolean,
     text: String,
-  },
+  }
 };
 </script>
 
@@ -47,7 +47,7 @@ export default {
     }
   }
 }
-.flex {
+.demo-flex {
   display: flex;
   align-items: center;
   .doc-demo-tip__text {

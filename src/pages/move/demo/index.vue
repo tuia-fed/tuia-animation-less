@@ -1,6 +1,6 @@
 <template>
   <demo-section class="demo-fadeIn">
-    <demo-tip card text="想看效果，请点击" class="flex">
+    <demo-tip card text="想看效果，请点击" class="demo-flex">
       <div class="tip ele1"></div>
     </demo-tip>
     <demo-block card title="基础用法-水平移动">
@@ -10,10 +10,10 @@
       <div :class="{'tuia_animate_animated': true, 'tuia_animate_moveY': activeY, 'ele1': true }" @click="handleShow('activeY')"></div>
     </demo-block>
     <demo-block card title="less函数-水平移动">
-      <div :class="['ele1', 'box2', action2 ? 'action' : '']" @click="handleShow('action2')"></div>
+      <div :class="['ele1', 'box2', action2 ? 'active' : '']" @click="handleShow('action2')"></div>
     </demo-block>
     <demo-block card title="less函数-垂直移动">
-      <div :class="['ele1', 'box1', action1 ? 'action' : '']" @click="handleShow('action1')"></div>
+      <div :class="['ele1', 'box1', action1 ? 'active' : '']" @click="handleShow('action1')"></div>
     </demo-block>
     <demo-block card title="@keyframes-水平移动">
       <div :class="{'ele1': true, 'tuia_animate_animated': true, 'box3': isActiveKeyframesX}" @click="handleShow('isActiveKeyframesX')"></div>
@@ -77,12 +77,12 @@ export default {
     background-color: #fff;
   }
 }
-.box1.action {
+.box1.active {
   // #region css1
   .move_y();
   // #endregion css1
 }
-.box2.action {
+.box2.active {
   // #region css2
   .move_x();
   // #endregion css2

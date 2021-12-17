@@ -1,0 +1,29 @@
+@keyframes moveX {
+  0% {
+    transform: translateX(0)
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+.moveX {
+  animation-name: moveX;
+  animation-duration: 0.3s;
+  animation-timing-function: ease;
+}
+.move_x(@from: 0, @to: 100%, @duration: 0.3s, @timing-function: ease, @delay: 0, @iteration-count: forwards) {
+  .moveXFrame(~`'tuia-move_x_'+Math.round(Math.random() * 1.0e8)`);
+}
+.moveXFrame(@name) {
+  animation: @name @duration @timing-function @iteration-count;
+  @keyframes @name {
+    0% {
+      transform: translateX(@from)
+    }
+
+    100% {
+      transform: translateX(@to);
+    }
+  }
+}

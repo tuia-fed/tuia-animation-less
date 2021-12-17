@@ -1,0 +1,31 @@
+@keyframes moveY {
+  0% {
+    transform: translateY(100%)
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+.moveY {
+  animation-name: moveY;
+  animation-duration: 0.3s;
+  animation-timing-function: ease;
+}
+
+// 位移
+.move_y(@from: 100%, @to: 0, @duration: 0.3s, @timing-function: ease, @delay: 0, @iteration-count: forwards) {
+  .moveYFrame(~`'tuia-move_y_'+Math.round(Math.random() * 1.0e8)`);
+}
+.moveYFrame(@name) {
+  animation: @name @duration @timing-function @iteration-count;
+  @keyframes @name {
+    0% {
+      transform: translateY(@from)
+    }
+
+    100% {
+      transform: translateY(@to);
+    }
+  }
+}

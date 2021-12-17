@@ -38,5 +38,46 @@ export default ({
 })
 </script>
 <style lang="less" scoped>
-@import '../common/style/demo-home.less';
+// @import '../common/style/demo-home.less';
+.demo-home {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100vh;
+  padding: 46px 20px 20px;
+  background-color: #fff;
+  &__title,
+  &__desc {
+    padding-left: 16px;
+    font-weight: normal;
+    line-height: 1;
+    user-select: none;
+  }
+
+  &__title {
+    margin: 0 0 16px;
+    font-size: 32px;
+
+    img,
+    span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    img {
+      width: 32px;
+    }
+
+    span {
+      margin-left: 16px;
+    }
+
+  }
+
+  &__desc {
+    margin: 0 0 40px;
+    color: rgba(69, 90, 100, 0.6);
+    font-size: 14px;
+  }
+}
+
 </style>

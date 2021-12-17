@@ -1,0 +1,36 @@
+// 漂浮
+@keyframes float {
+  25% {
+    transform: translateY(-4px);
+  }
+  50%, 100% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(4px);
+  }
+}
+.float {
+  animation-duration: calc(var(--animate-duration) * 0.75);
+  animation-name: float;
+  animation-iteration-count: infinite;
+}
+.floatFrames(@name) {
+  animation-name: @name;
+  animation-duration: calc((@duration) * 0.75);
+  animation-iteration-count: infinite;
+  @keyframes @name {
+    25% {
+      transform: translateY(unit(-1 * @y, px));
+    }
+    50%, 100% {
+      transform: translateY(0);
+    }
+    75% {
+      transform: translateY(unit(@y, px));
+    }
+  }
+}
+.float(@duration: 1s, @y: 4) {
+  .floatFrames(~`'tuia-float_'+Math.round(Math.random() * 1.0e8)`);
+}

@@ -1,0 +1,33 @@
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.rotate {
+  animation-name: rotate;
+  animation-duration: 9s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+// 旋转
+.rotate(@duration: 9s, @timing-function: linear, @delay: 0.1s, @iteration-count: infinite, @direction: normal, @fill-mode: none) {
+  .rotateframe(~`'tuia-rotate_'+Math.round(Math.random() * 1.0e8)`)
+}
+.rotateframe(@name) {
+  animation: @name @duration @timing-function @delay @iteration-count @direction @fill-mode;
+
+  @keyframes @name {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}

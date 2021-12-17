@@ -1,0 +1,52 @@
+.shine2() {
+  width: 300px;
+  height: 300px;
+  background-image: url('//yun.tuisnake.com/animation/8edae148-6dfe-44e6-b2e4-db3159ec8ff2.png');
+  background-size: 4500px 300px;
+  .shine2Frame(~`'tuia-shine2_'+Math.round(Math.random() * 1.0e8)`)
+}
+.shine2Frame(@name) {
+  animation: @name 0.62s steps(1) both;
+
+  @keyframes @name {
+    0% { background-position: 0px 0px; }
+    7.14% { background-position: -300px 0px; }
+    14.29% { background-position: -600px 0px; }
+    21.43% { background-position: -900px 0px; }
+    28.57% { background-position: -1200px 0px; }
+    35.71% { background-position: -1500px 0px; }
+    42.86% { background-position: -1800px 0px; }
+    50.00% { background-position: -2100px 0px; }
+    57.14% { background-position: -2400px 0px; }
+    64.29% { background-position: -2700px 0px; }
+    71.43% { background-position: -3000px 0px; }
+    78.57% { background-position: -3300px 0px; }
+    85.71% { background-position: -3600px 0px; }
+    92.86% { background-position: -3900px 0px; }
+    100.00% { background-position: -4200px 0px; }
+  }
+}
+@keyframes shine2{
+  0% { background-position: 0px 0px; }
+	7.14% { background-position: -300px 0px; }
+	14.29% { background-position: -600px 0px; }
+	21.43% { background-position: -900px 0px; }
+	28.57% { background-position: -1200px 0px; }
+	35.71% { background-position: -1500px 0px; }
+	42.86% { background-position: -1800px 0px; }
+	50.00% { background-position: -2100px 0px; }
+	57.14% { background-position: -2400px 0px; }
+	64.29% { background-position: -2700px 0px; }
+	71.43% { background-position: -3000px 0px; }
+	78.57% { background-position: -3300px 0px; }
+	85.71% { background-position: -3600px 0px; }
+	92.86% { background-position: -3900px 0px; }
+	100.00% { background-position: -4200px 0px; }
+}
+.shine2 {
+  width: 300px;
+  height: 300px;
+  background-image: url('//yun.tuisnake.com/animation/8edae148-6dfe-44e6-b2e4-db3159ec8ff2.png');
+  background-size: 4500px 300px;
+  animation: shine2 0.62s steps(1);
+}

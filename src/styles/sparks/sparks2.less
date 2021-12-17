@@ -1,0 +1,34 @@
+.sparksLight() {
+  width: 500px;
+  height: 500px;
+  .BG('//yun.tuisnake.com/h5-mami/GoldMining_Video/firstSparkSprites.5d7e57.png');
+  background-size: 2500px 1000px;
+  .sparksLightFrame(~`'tuia-sparks_light_'+Math.round(Math.random() * 1.0e8)`)
+  
+}
+.sparksLightFrame(@name) {
+  @keyframes @name {
+    0% { background-position: 0 0; }
+    20.00% { background-position: -500px 0; }
+    40.00% { background-position: -1000px 0; }
+    60.00% { background-position: -1500px 0; }
+    80.00% { background-position: -2000px 0; }
+    100.00% { background-position: 0 -500px; }
+  }
+  animation: @name 0.5s steps(1);
+}
+
+@keyframes sparksLight {
+  0% { background-position: 0 0; }
+  20.00% { background-position: -500px 0; }
+  40.00% { background-position: -1000px 0; }
+  60.00% { background-position: -1500px 0; }
+  80.00% { background-position: -2000px 0; }
+  100.00% { background-position: 0 -500px; }
+}
+.sparksLight {
+  .BG('//yun.tuisnake.com/h5-mami/GoldMining_Video/firstSparkSprites.5d7e57.png');
+  background-size: 2500px 1000px;
+  transform: scale(2);
+  animation: sparksLight 0.5s steps(1);
+}

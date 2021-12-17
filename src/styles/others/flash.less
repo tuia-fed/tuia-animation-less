@@ -1,0 +1,35 @@
+@keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+.flash {
+  animation-name: flash;
+}
+.flashFrame(@name) {
+  @keyframes @name {
+    from,
+    50%,
+    to {
+      opacity: 1;
+    }
+  
+    25%,
+    75% {
+      opacity: 0;
+    }
+  }
+  animation-name: @name;
+  animation-duration: @durantion;
+}
+
+.flash(@durantion: 1s) {
+  .flashFrame(~`'tuia-flash_'+Math.round(Math.random() * 1.0e8)`);
+}

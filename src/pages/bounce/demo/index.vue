@@ -1,16 +1,13 @@
 <template>
   <demo-section class="demo-shake">
-    <demo-tip card text="想看效果，请点击" class="flex">
-      <div class="tip ele1"></div>
-    </demo-tip>
     <demo-block card title="基础用法">
-      <div ref="demo1" :class="{'tuia_animate_animated': true, 'tuia_animate_bounce': isBounce, 'ele1': true, 'box1': true}" @click="bounce('isBounce')"></div>
+      <div ref="demo-demo1" :class="{'tuia_animate_animated': true, 'tuia_animate_bounce': isBounce, 'ele1': true, 'box1': true}" @click="bounce('isBounce')"></div>
     </demo-block>
     <demo-block card title="less 函数">
-      <div ref="demo1" :class="{'ele1': true, 'box2': isBounce2}" @click="bounce('isBounce2')"></div>
+      <div ref="demo-demo1" :class="{'ele1': true, 'box2': isBounce2}" @click="bounce('isBounce2')"></div>
     </demo-block>
     <demo-block card title="@keyframes">
-      <div ref="demo1" :class="{'ele1': true, 'tuia_animate_animated': true, 'box3': isBounce3}" @click="bounce('isBounce3')"></div>
+      <div ref="demo-demo1" :class="{'ele1': true, 'tuia_animate_animated': true, 'box3': isBounce3}" @click="bounce('isBounce3')"></div>
     </demo-block>
   </demo-section>
 </template>
@@ -45,8 +42,14 @@ export default {
 }
 // #endregion js
 </script>
+<style scoped>
+/* @import '~@/css/index.css'; */
+</style>
 <style lang="less" scoped>
-@import '../../../styles/index.less';
+@import '~@/styles/index.less';
+.ele1 {
+  animation-iteration-count: infinite !important;
+}
 .box2 {
 // #region css1
   .bounce();

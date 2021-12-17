@@ -1,0 +1,32 @@
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+.fadeOut {
+  animation-name: fadeOut;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+}
+// 淡出
+.fadeOut(@duration: 0.4s) {
+  .fadeOutFrame(~`'tuia-fadeOut_'+Math.round(Math.random() * 1.0e8)`)
+}
+.fadeOutFrame(@name) {
+  @keyframes @name {
+    0% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+  animation-name:@name;
+  animation-duration:@duration;
+  animation-fill-mode:forwards;
+}

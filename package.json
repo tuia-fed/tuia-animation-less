@@ -1,16 +1,28 @@
 {
-  "name": "tuia-animation",
+  "name": "tuia-animation-less",
   "description": "提供通用less动画animation",
-  "version": "0.1.1",
-  "private": true,
-  "main": "lib/index.js",
-  "module": "es/index.js",
+  "version": "1.2.9",
+  "private": false,
+  "main": "src/styles/index.less",
   "homepage": "https://tuia-fed.github.io/tuia-animation-less",
+  "author": {
+    "name": "tuia-animation"
+  },
+  "animateConfig": {
+    "prefix": "tuia_animate_"
+  },
   "scripts": {
     "serve": "concurrently --kill-others-on-fail \"npm:dev-*\"",
     "dev-demo": "vue-cli-service serve",
     "dev-docs": "vuepress dev docs --open",
     "dev-copy": "NODE_ENV=development node plugins/fs-copy",
+    "less": "npx postcss src/styles/index.less -o animate.less --no-map --env development -w",
+    "compat": "npx postcss src/styles/index.less -o animate.compat.less --no-map --env compat",
+    "raw": "npx postcss src/styles/index.less -o animate.less --no-map --env development",
+    "prod": "npx postcss src/styles/index.less -o animate.min.less --no-map --env production",
+    "minicss": "npx postcss src/css/index.css -o src/css/index.min.css --no-map --env production",
+    "postcssless:build": "npm-run-all raw prod compat",
+    "css:build": "gulp concatless &&  yarn minicss",
     "copy:build": "NODE_ENV=production node plugins/fs-copy",
     "docs:build": "NODE_ENV=production vuepress build docs",
     "build": "NODE_ENV=production vue-cli-service build",
@@ -19,8 +31,6 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "postcss": "^8.3.1",
-    "postcss-px2rem-exclude": "^0.0.6",
     "vue": "^2.6.14",
     "vue-loader": "^16.1.2"
   },
@@ -32,8 +42,18 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
+    "gulp": "^4.0.2",
+    "gulp-less": "^5.0.0",
     "less": "^4.1.1",
     "less-loader": "^5.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.3.1",
+    "postcss-cli": "^8.3.1",
+    "postcss-easy-import": "^3.0.0",
+    "postcss-header": "^3.0.1",
+    "postcss-prefixer": "^2.1.3",
+    "postcss-preset-env": "^6.7.0",
+    "postcss-px2rem-exclude": "^0.0.6",
     "vue-template-compiler": "^2.6.14",
     "vuepress": "^1.8.2"
   },
@@ -55,5 +75,17 @@
     "> 1%",
     "last 2 versions",
     "not dead"
+  ],
+  "style": "src/styles/index.less",
+  "jspm": {
+    "main": "index.less!",
+    "format": "global",
+    "directories": {
+      "lib": "./"
+    }
+  },
+  "files": [
+    "src/styles/*",
+    "src/css/*"
   ]
 }

@@ -18,4 +18,3 @@ export default ({
 <style lang="less">
 @import './common/style/base.less';
 </style>
-

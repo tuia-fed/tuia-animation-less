@@ -1,0 +1,104 @@
+// 火花
+.sparks() {
+  .sparksFrame(~`'tuia-sparks_'+Math.round(Math.random() * 1.0e8)`);
+  background-image: url('//yun.tuisnake.com/mami-media/img/e9064d2f-3644-413b-b62b-d8451f5fe76a.png');
+  background-repeat: no-repeat;
+  background-position: -10000px -10000px;
+  background-size: 400% 300%;
+  transform: scale(1.8);
+}
+.sparksFrame(@name) {
+  @keyframes @name {
+    0% {
+      background-size: 400% 300%;
+    }
+  
+    10.00% {
+      background-position: 33.33333333333333% 0%;
+    }
+  
+    20.00% {
+      background-position: 0% 50%;
+    }
+  
+    30.00% {
+      background-position: 33.33333333333333% 50%;
+    }
+  
+    40.00% {
+      background-position: 66.66666666666666% 0%;
+    }
+  
+    50.00% {
+      background-position: 66.66666666666666% 50%;
+    }
+  
+    60.00% {
+      background-position: 0% 100%;
+    }
+  
+    70.00% {
+      background-position: 33.33333333333333% 100%;
+    }
+  
+    80.00% {
+      background-position: 66.66666666666666% 100%;
+    }
+  
+    90.00%,
+    100% {
+      background-position: 100% 0%;
+    }
+  }
+  animation: @name 0.4s steps(1) 0s 1;
+}
+@keyframes sparks {
+  0% {
+    background-size: 400% 300%;
+  }
+
+  10.00% {
+    background-position: 33.33333333333333% 0%;
+  }
+
+  20.00% {
+    background-position: 0% 50%;
+  }
+
+  30.00% {
+    background-position: 33.33333333333333% 50%;
+  }
+
+  40.00% {
+    background-position: 66.66666666666666% 0%;
+  }
+
+  50.00% {
+    background-position: 66.66666666666666% 50%;
+  }
+
+  60.00% {
+    background-position: 0% 100%;
+  }
+
+  70.00% {
+    background-position: 33.33333333333333% 100%;
+  }
+
+  80.00% {
+    background-position: 66.66666666666666% 100%;
+  }
+
+  90.00%,
+  100% {
+    background-position: 100% 0%;
+  }
+}
+.sparks {
+  background-image: url('//yun.tuisnake.com/mami-media/img/e9064d2f-3644-413b-b62b-d8451f5fe76a.png');
+  background-repeat: no-repeat;
+  background-position: -10000px -10000px;
+  background-size: 400% 300%;
+  transform: scale(1.8);
+  animation: sparks 0.4s steps(1) 0s 1;
+}

@@ -1,0 +1,39 @@
+@keyframes breathe {
+  0%,
+    100% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(0.95);
+    }
+}
+.breathe {
+  animation-name: breathe;
+  animation-duration: calc(var(--animate-duration) * 0.75);
+  // animation-duration: 0.7s;
+  // animation-timing-function: ease-in;
+  // animation-iteration-count: infinite;
+}
+
+// less 函数
+.breathe(@scaleNum: 0.95, @duration: 0.7s, @timing-function: ease-in, @iteration-count: infinite) {
+  .breatheframe(~`'tuia-breathe_'+Math.round(Math.random() * 1.0e8)`);
+}
+.breatheframe(@name) {
+  @keyframes @name {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(@scaleNum);
+    }
+  }
+
+  animation-name: @name;
+  animation-duration: @duration;
+  animation-timing-function: @timing-function;
+  animation-iteration-count: @iteration-count;
+}

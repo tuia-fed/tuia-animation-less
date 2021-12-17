@@ -1,0 +1,46 @@
+.shine4() {
+  width: 500px;
+  height: 400px;
+  background-image: url('//yun.tuisnake.com/animation/745a4203-e079-469a-bb15-feadd62cd0d1.png');
+  background-size: 5000px 800px;
+  .shine4Frame(~`'tuia-shine4_'+Math.round(Math.random() * 1.0e8)`)
+}
+.shine4Frame(@name) {
+  animation: @name 0.5s steps(1) infinite;
+
+  @keyframes @name {
+    0% { background-position: 0px 0px; }
+    9.09% { background-position: -500px 0px; }
+    18.18% { background-position: -1000px 0px; }
+    27.27% { background-position: -1500px 0px; }
+    36.36% { background-position: -2000px 0px; }
+    45.45% { background-position: -2500px 0px; }
+    54.55% { background-position: -3000px 0px; }
+    63.64% { background-position: -3500px 0px; }
+    72.73% { background-position: -4000px 0px; }
+    81.82% { background-position: -4500px 0px; }
+    90.91% { background-position: 0px -400px; }
+    100.00% { background-position: -500px -400px; }
+  }
+}
+@keyframes shine4 {
+  0% { background-position: 0px 0px; }
+	9.09% { background-position: -500px 0px; }
+	18.18% { background-position: -1000px 0px; }
+	27.27% { background-position: -1500px 0px; }
+	36.36% { background-position: -2000px 0px; }
+	45.45% { background-position: -2500px 0px; }
+	54.55% { background-position: -3000px 0px; }
+	63.64% { background-position: -3500px 0px; }
+	72.73% { background-position: -4000px 0px; }
+	81.82% { background-position: -4500px 0px; }
+	90.91% { background-position: 0px -400px; }
+	100.00% { background-position: -500px -400px; }
+}
+.shine4 {
+  width: 500px;
+  height: 400px;
+  background-image: url('//yun.tuisnake.com/animation/745a4203-e079-469a-bb15-feadd62cd0d1.png');
+  background-size: 5000px 800px;
+  animation: shine4 0.5s steps(1) infinite;
+}

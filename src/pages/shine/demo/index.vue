@@ -7,12 +7,12 @@
       <div class="box box2"></div>
     </demo-block>
     <demo-block card title="闪光效果3">
-      <div class="bcontent">
+      <div class="demo-bcontent">
         <div class="box box3"></div>
       </div>
     </demo-block>
     <demo-block card title="闪光效果4">
-      <div class="bcontent">
+      <div class="demo-bcontent">
         <div class="box box4"></div>
       </div>
     </demo-block>
@@ -33,7 +33,7 @@ export default {
 </script>
 <style lang="less" scoped>
 @import '../../../styles/index.less';
-.bcontent {
+.demo-bcontent {
   color: #fff;
   background-color: #000;
   border-radius: 32px;
